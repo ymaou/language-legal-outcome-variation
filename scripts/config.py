@@ -5,6 +5,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 STIMULI = ROOT / "data" / "stimuli"
 PROMPTS = ROOT / "prompts"
+# Prompt sets: "decide" is the frozen main-run prompt (prompts/); "predict" the exploratory predictive
+# framing added on 14 September 2026 (prompts/predict/; Greek and English arms only). Rule texts are shared.
+PROMPT_SETS = {"decide": PROMPTS, "predict": PROMPTS / "predict"}
 RAW = ROOT / "raw"
 FROZEN = ROOT / "FROZEN.sha256"
 

@@ -60,12 +60,13 @@ def originals_with_failures(block):
             for r in block["draws"] if not r["is_replacement"]]
 
 
-def case_measures(cfg, case, blocks):
-    B = {arm: blocks[(cfg, case, arm)] for arm in ARMS}
+def case_measures(cfg, case, blocks, arms):
+    B = {arm: blocks[(cfg, case, arm)] for arm in arms}
+    present = [a for a in COMPARED if a in B]
     row = {"config": cfg, "model": CONFIGS[cfg]["model"], "reasoning": CONFIGS[cfg]["reasoning"], "case": case}
-    for arm in ARMS:
+    for arm in arms:
         row[f"valid {arm}"] = f"{len(B[arm]['valid'])}/{B[arm]['k']}"
-    row["complete"] = all(len(B[a]["valid"]) == B[a]["k"] for a in ARMS)
+    row["complete"] = all(len(B[a]["valid"]) == B[a]["k"] for a in arms)
     greek = outcomes(B[GREEK_ARM])
     row["usable"] = bool(greek)
     if not greek:
@@ -73,26 +74,32 @@ def case_measures(cfg, case, blocks):
     for name, (_, summarise, transform) in DEFINITIONS.items():
         if name == "failcat":
             g = originals_with_failures(B[GREEK_ARM])
-            arms = {a: originals_with_failures(B[a]) for a in COMPARED}
+            cmp = {a: originals_with_failures(B[a]) for a in present}
         else:
             t = transform or (lambda v: v)
             g = t(greek)
-            arms = {a: t(outcomes(B[a])) for a in COMPARED}
-        r = M.per_case_rates(g, arms, halvings(len(g)), summarise)
+            cmp = {a: t(outcomes(B[a])) for a in present}
+        r = M.per_case_rates(g, cmp, halvings(len(g)), summarise)
+        nan = float("nan")
+        r = {k: r.get(k, nan) for k in ("F", "bt-en", "en", "bt-de", "de-lit")}
         row.update({f"{name}:F": r["F"], f"{name}:W_en": r["bt-en"], f"{name}:L_EN": r["en"],
                     f"{name}:W_de": r["bt-de"], f"{name}:L_DE": r["de-lit"],
                     f"{name}:delta_EN": r["en"] - r["bt-en"], f"{name}:delta_DE": r["de-lit"] - r["bt-de"],
                     f"{name}:L_EN_minus_F": r["en"] - r["F"]})
-    modal_all = {arm: M.modal(outcomes(B[arm])) for arm in ARMS}
-    for arm in ARMS:
+    modal_all = {arm: M.modal(outcomes(B[arm])) for arm in arms}
+    for arm in arms:
         row[f"modal {arm}"] = modal_all[arm]
         row[f"share {arm}"] = M.modal_share(outcomes(B[arm]))
-    row["EN vs BT-en"] = float(modal_all["en"] != modal_all["bt-en"])
-    row["DE-lit vs BT-de"] = float(modal_all["de-lit"] != modal_all["bt-de"])
-    row["DE-lit vs DE-eng"] = float(modal_all["de-lit"] != modal_all["de-eng"])
-    english = outcomes(B["en"])
+    def contrast(a, b):
+        return float(modal_all[a] != modal_all[b]) if a in modal_all and b in modal_all else float("nan")
+    row["EN vs BT-en"] = contrast("en", "bt-en")
+    row["DE-lit vs BT-de"] = contrast("de-lit", "bt-de")
+    row["DE-lit vs DE-eng"] = contrast("de-lit", "de-eng")
+    english = outcomes(B["en"]) if "en" in B else []
     row["D"] = M.grant_share(english) - M.grant_share(greek) if english else float("nan")
-    if modal_all["en"] == modal_all[GREEK_ARM]:
+    if "en" not in modal_all:
+        row["flip direction"] = "n/a"
+    elif modal_all["en"] == modal_all[GREEK_ARM]:
         row["flip direction"] = "no flip"
     elif row["D"] > 0:
         row["flip direction"] = "towards granting"
@@ -102,6 +109,9 @@ def case_measures(cfg, case, blocks):
         row["flip direction"] = "flip, grant share unchanged"
     greek_grounds = outcomes(B[GREEK_ARM], "ground")
     for arm in ("en", "bt-en"):
+        if arm not in B:
+            row[f"ground holding {arm}"] = row[f"ground mismatched {arm}"] = 0
+            continue
         holding, mismatched = M.ground_mismatch(greek, greek_grounds, outcomes(B[arm]), outcomes(B[arm], "ground"),
                                                 halvings(len(greek)))
         row[f"ground holding {arm}"] = holding
@@ -143,11 +153,12 @@ def main():
     if manifest["mode"] == "pilot":
         sys.exit("a pilot run is not analysed (v8 section 10.10)")
     configs, cases = list(manifest["configs"]), manifest["cases"]
+    arms = manifest.get("arms", list(ARMS))
     dry = any(r.get("dry_run") for r in records if r.get("kind") == "draw")
     out_dir = RESULTS / a.run
     (out_dir / "csv").mkdir(parents=True, exist_ok=True)
 
-    per_case = [case_measures(cfg, case, blocks) for cfg in configs for case in cases]
+    per_case = [case_measures(cfg, case, blocks, arms) for cfg in configs for case in cases]
     by_cfg = defaultdict(list)
     for r in per_case:
         if r["usable"]:
@@ -244,10 +255,10 @@ def main():
                                 "Greek modal, in words", "Greek modal share", "agree", "court ground (model's scale)"]
 
     # Per case
-    case_headers = ["config", "model", "reasoning", "case", "complete"] + [f"valid {a}" for a in ARMS] + \
+    case_headers = ["config", "model", "reasoning", "case", "complete"] + [f"valid {a}" for a in arms] + \
         [f"modal:{k}" for k, _ in RATES] + [f"modal:{k}" for k, _ in DIFFERENCES] + \
         ["EN vs BT-en", "DE-lit vs BT-de", "DE-lit vs DE-eng", "D", "flip direction"] + \
-        [f"modal {a}" for a in ARMS] + [f"share {a}" for a in ARMS]
+        [f"modal {a}" for a in arms] + [f"share {a}" for a in arms]
     case_rows = [[r.get(h) for h in case_headers] for r in per_case]
 
     # Strata, descriptive
@@ -267,7 +278,7 @@ def main():
     # Blocks, failures, tokens, draws
     block_rows, failure_rows, token_rows, draw_rows = [], [], [], []
     for cfg in configs:
-        for arm in ARMS:
+        for arm in arms:
             arm_draws = [r for case in cases for r in blocks[(cfg, case, arm)]["draws"]]
             statuses = Counter(r["parse"]["status"] for r in arm_draws)
             calls = len(arm_draws)
@@ -316,6 +327,7 @@ def main():
         f"Results for run {a.run}{' - FABRICATED DRY-RUN DATA, NOT RESULTS' if dry else ''}.",
         f"Generated {datetime.now(timezone.utc).isoformat(timespec='seconds')} by scripts/analyse.py, as specified in "
         "study design v8, sections 10.4-10.7.",
+        f"Prompt set: {manifest.get('prompt_set', 'decide')}; arms: {', '.join(arms)}. "
         f"Draws per arm {manifest['draws_per_arm']}, Greek {manifest['greek_draws']}. Cases {len(cases)}. "
         f"Halvings {N_SPLITS} (seed {SPLIT_SEED}); bootstrap {N_BOOT:,} resamples (seed {BOOT_SEED}); "
         f"run order seed {manifest['order_seed']}.",

@@ -69,3 +69,6 @@ bdf37ec38749fc524e6b248c3813081112e6529da9e95ca823e7fbd9122e0c97  prompts/prompt
 881ca0471d9cd2eb85589f8033343a25cd174b56d1a831323206749269d9270c  prompts/prompt_de-lit.md
 974b7313486b449697523b6296618cbeed058f441a0cb39a377677bd8780954d  prompts/prompt_el.md
 34a4c81840cd860293cca48b766c4c27c1f4c24ad30e23b3cf02d83c8f566b3f  prompts/prompt_en.md
+# Predictive prompts (study design v8 section 10.12), frozen 14 September 2026 before the predictive run.
+1fedc2ca6d2b07cd6870a61d5c8c35ff1b970b356b35270bae4aaf3e74827123  prompts/predict/prompt_el.md
+a62fa044647a5ed5893fe35110d43086b2d0d05fe07ba55175052027f7e6ad86  prompts/predict/prompt_en.md

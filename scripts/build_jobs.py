@@ -20,7 +20,7 @@ from importlib import metadata
 
 import prompts
 from config import (ARMS, BUDGET_EUR, CASES, CEILING_EUR, CONFIGS, DRAWS, FROZEN, GREEK_ARM, GREEK_FACTOR,
-                    MAX_OUTPUT_TOKENS, PILOT_CAP_EUR, PRICES, RAW, REPLACEMENT_SHARE, ROOT)
+                    MAX_OUTPUT_TOKENS, PILOT_CAP_EUR, PRICES, PROMPT_SETS, RAW, REPLACEMENT_SHARE, ROOT)
 from integrity import verify_frozen
 
 
@@ -34,6 +34,9 @@ def main():
     ap.add_argument("--mode", required=True, choices=sorted(DRAWS))
     ap.add_argument("--configs", default=",".join(CONFIGS), help="comma-separated; default all")
     ap.add_argument("--seed", type=int, help="order seed; drawn at random and recorded if omitted")
+    ap.add_argument("--prompts", default="decide", choices=sorted(PROMPT_SETS), help="prompt set; default the frozen main-run prompts")
+    ap.add_argument("--arms", default=",".join(ARMS), help="comma-separated arms; default all six")
+    ap.add_argument("--draws", type=int, help="draws per arm, overriding the mode's default (Greek gets twice this)")
     a = ap.parse_args()
 
     n_frozen = verify_frozen()
@@ -50,14 +53,18 @@ def main():
         cases = [min(lengths, key=lengths.get), max(lengths, key=lengths.get)]
     else:
         cases = list(CASES)
-    k = DRAWS[a.mode]
+    k = a.draws or DRAWS[a.mode]
+    arms = a.arms.split(",")
+    unknown_arms = [x for x in arms if x not in ARMS]
+    if unknown_arms:
+        sys.exit(f"unknown arm(s): {unknown_arms}")
     seed = a.seed if a.seed is not None else secrets.randbits(32)
 
     blocks = []
     for cfg in configs:
         for case in cases:
-            for arm in ARMS:
-                system, user = prompts.build(arm, case)
+            for arm in arms:
+                system, user = prompts.build(arm, case, a.prompts)
                 blocks.append({
                     "block": f"{cfg}|{case}|{arm}", "config": cfg, "case": case, "arm": arm,
                     "k": k * (GREEK_FACTOR[a.mode] if arm == GREEK_ARM else 1),
@@ -77,6 +84,8 @@ def main():
     manifest = {
         "run": a.run,
         "mode": a.mode,
+        "prompt_set": a.prompts,
+        "arms": arms,
         "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "order_seed": seed,
         "cases": cases,

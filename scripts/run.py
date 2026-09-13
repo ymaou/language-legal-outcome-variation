@@ -133,7 +133,7 @@ async def run(a):
         cfg = manifest["configs"][block["config"]]
         provider = cfg["provider"]
         lang = ARMS[block["arm"]]
-        system, user = prompts.build(block["arm"], block["case"])
+        system, user = prompts.build(block["arm"], block["case"], manifest.get("prompt_set", "decide"))
         if hashlib.sha256(f"{system}\n\x00\n{user}".encode("utf-8")).hexdigest() != block["prompt_sha256"]:
             state["fatal"] = f"prompt for {block['block']} differs from the manifest"
             return "fatal", 0.0

@@ -7,7 +7,7 @@ case_id line. Line endings are normalised to LF; the frozen files themselves are
 """
 import re
 
-from config import ARMS, PROMPTS, STIMULI
+from config import ARMS, PROMPTS, PROMPT_SETS, STIMULI
 
 _FRONT = re.compile(r"\A---\ncase_id: (C\d{4})\n---\n")
 
@@ -16,8 +16,8 @@ def _read(path):
     return path.read_text(encoding="utf-8").replace("\r\n", "\n")
 
 
-def prompt_parts(lang):
-    text = _read(PROMPTS / f"prompt_{lang}.md").lstrip()
+def prompt_parts(lang, prompt_set="decide"):
+    text = _read(PROMPT_SETS[prompt_set] / f"prompt_{lang}.md").lstrip()
     head, sep, user = text.partition("# USER PROMPT")
     if not sep or not head.startswith("# SYSTEM PROMPT"):
         raise ValueError(f"prompt_{lang}.md: section headings not found")
@@ -44,9 +44,9 @@ def file_a(arm, case):
     return body
 
 
-def build(arm, case):
+def build(arm, case, prompt_set="decide"):
     lang = ARMS[arm]
-    system, user = prompt_parts(lang)
+    system, user = prompt_parts(lang, prompt_set)
     user = user.replace("{rule text}", rule_text(lang), 1)
     user = user.replace("{File A}", file_a(arm, case), 1)
     return system, user

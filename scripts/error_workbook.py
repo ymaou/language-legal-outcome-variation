@@ -65,6 +65,8 @@ def main():
             greek = [r["parse"]["outcome"] for r in greek_block["valid"]]
             greek_modal, greek_share = M.modal(greek), M.modal_share(greek)
             for arm, kind in ARM_KIND.items():
+                if (cfg, case, arm) not in blocks:
+                    continue
                 arm_block = blocks[(cfg, case, arm)]
                 values = [r["parse"]["outcome"] for r in arm_block["valid"]]
                 arm_modal, arm_share = M.modal(values), M.modal_share(values)
