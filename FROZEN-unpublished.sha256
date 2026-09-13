@@ -3,7 +3,8 @@
 # 4 sealed: the half of each judgment below the cut (the court's reasoning and order), which no
 # model and nothing on the run side reads. prompts/ and rule text/: the published prompt and rule
 # files as kept privately, with their provenance header comments; the published copies are the
-# same text with those comments removed. Paths are relative to the private working folder.
+# same text with those comments removed. data/: the author's coding of the court's order in each
+# case, completed before any model was run. Paths are relative to the private working folder.
 07bb7428ae314f47b3df1d478352b98af637c82889d678b9136a2241c8148ccf       83021  10 cases/1 original/C0990.md
 9c251659bc283921f5dd82e3c97b844c69948bd91d21bde2aec98dba9501b1bf       27274  10 cases/1 original/C1026.md
 2dcda9078d1be6d64a9dbffa55b3237474a32559916aec22bd6de04736df8066       70642  10 cases/1 original/C1099.md
@@ -42,3 +43,4 @@ b4d457732cc1ef179243d4a6d261d662de93e09c9c64d96ee61044d66da0e40f       11417  pr
 8eb50fa267539b1a413770030fa0f09f5da3c71af94f3cf2665681ec1616e146        7470  prompts/rule text/part24_en.md
 1aa586a73712f4f57300da3cdab8d461e36384a289598342a39249d3461e3b03        6907  prompts/rule text/part24_de-lit.md
 9a55b0ae600a077338fd4a23aa0797c69c6631be9421bb9b068c4004e7a7a06f        7092  prompts/rule text/part24_de-eng.md
+7a66e291c7fa79a2dc7f05851cc9c4879aceae537cd4e30a3c9144d2ca068f6d       13026  data/outcome-coding_against actual court decision.xlsx
