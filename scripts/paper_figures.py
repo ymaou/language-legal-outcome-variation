@@ -82,6 +82,42 @@ def fig_grid(blocks, court, configs, cases, out):
     save(fig, out, "F1_modal_disposal_grid")
 
 
+def fig_grid_paper(blocks, court, configs, cases, out):
+    """Figure 1 at the proceedings' text width (about 12.5 cm): the four panels in a 2 x 2 layout."""
+    fig, axes = plt.subplots(2, 2, figsize=(4.9, 5.4), sharey=True)
+    cols = ARMS + ["court"]
+    short = {"gr": "GR", "bt-en": "BT-en", "en": "EN", "bt-de": "BT-de", "de-lit": "DE-lit", "de-eng": "DE-eng",
+             "court": "court"}
+    for ax, cfg in zip(axes.flat, configs):
+        ax.set_title(CFG_LABEL[cfg], fontsize=7, color=INK, pad=4)
+        for i, case in enumerate(cases):
+            for j, col in enumerate(cols):
+                if col == "court":
+                    v = int(court[case])
+                else:
+                    m = block(blocks, cfg, case, col)["modal"]
+                    v = int(m) if m.isdigit() else "none"
+                x = j + (0.45 if col == "court" else 0)
+                ax.add_patch(FancyBboxPatch((x + 0.08, i + 0.08), 0.84, 0.84,
+                                            boxstyle="round,pad=0,rounding_size=0.12",
+                                            linewidth=0.6 if v == "none" else 0, edgecolor=AXIS,
+                                            facecolor=RELIEF[v][0], hatch="//" if v == "none" else None))
+        ax.set_xlim(0, len(cols) + 0.45)
+        ax.set_ylim(len(cases), 0)
+        ax.set_xticks([j + (0.45 if c == "court" else 0) + 0.5 for j, c in enumerate(cols)])
+        ax.set_xticklabels([short[c] for c in cols], rotation=90, fontsize=6)
+        ax.set_yticks([i + 0.5 for i in range(len(cases))])
+        ax.set_yticklabels(cases, fontsize=6)
+        ax.tick_params(length=0)
+        for s in ax.spines.values():
+            s.set_visible(False)
+        ax.axvline(len(ARMS) + 0.22, color=AXIS, lw=0.6)
+    handles = [Patch(facecolor=RELIEF[k][0], label=RELIEF[k][1]) for k in (1, 2, 3)]
+    fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, -0.01))
+    fig.tight_layout(rect=(0, 0.04, 1, 1), h_pad=1.2)
+    save(fig, out, "F1_modal_disposal_grid_paper")
+
+
 def fig_grant_share(blocks, court, configs, cases, out):
     fig, axes = plt.subplots(len(configs), 1, figsize=(6.6, 5.8), sharex=True)
     for ax, cfg in zip(axes, configs):
@@ -116,6 +152,47 @@ def fig_grant_share(blocks, court, configs, cases, out):
     fig.legend(handles, labels, loc="lower center", ncol=3, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, -0.005))
     fig.tight_layout(rect=(0.02, 0.05, 1, 1))
     save(fig, out, "F2_grant_share_by_case")
+
+
+def fig_framing(out, decide_run="main-1", predict_run="predict-1"):
+    """Figure 2: grant share per case under the decide and predict framings, Greek and English arms. Colour is
+    the language (blue Greek, orange English); a filled marker is the decide framing, a hollow one predict."""
+    D, P = read(decide_run, "blocks"), read(predict_run, "blocks")
+    court = {r["case"]: r["court option"] for r in read(decide_run, "sensitivity_by_case")}
+    configs = [c for c in CFG_LABEL if any(b["configuration"] == c for b in P)]
+    cases = sorted({b["case"] for b in P})
+    fig, axes = plt.subplots(2, 2, figsize=(4.9, 4.2), sharex=True, sharey=True)
+    for ax, cfg in zip(axes.flat, configs):
+        for i, case in enumerate(cases):
+            if court[case] in ("1", "2"):
+                ax.axvspan(i - 0.5, i + 0.5, color="#f0efec", lw=0)
+        for arm, colour, dx in (("gr", "#2a78d6", -0.18), ("en", "#eb6834", 0.18)):
+            for blocks, hollow, dd in ((D, False, -0.07), (P, True, 0.07)):
+                ys = [float(block(blocks, cfg, case, arm)["grant share"]) for case in cases]
+                xs = [i + dx + dd for i in range(len(cases))]
+                ax.scatter(xs, ys, s=22, facecolor=SURFACE if hollow else colour, edgecolor=colour,
+                           linewidth=1.1, zorder=3)
+        ax.set_ylim(-0.05, 1.05)
+        ax.set_yticks([0, 0.5, 1])
+        ax.set_yticklabels(["0", ".5", "1"], fontsize=6)
+        ax.grid(axis="y", color=GRID, lw=0.6)
+        ax.set_axisbelow(True)
+        ax.set_title(CFG_LABEL[cfg], fontsize=7, color=INK, pad=3)
+        ax.set_xticks(range(len(cases)))
+        ax.set_xticklabels(cases, fontsize=5.5, rotation=90)
+        ax.tick_params(length=0)
+        for s in ("top", "right"):
+            ax.spines[s].set_visible(False)
+    from matplotlib.lines import Line2D
+    handles = [Line2D([], [], marker="o", ls="", ms=5, mfc="#2a78d6", mec="#2a78d6", label="Greek, decide"),
+               Line2D([], [], marker="o", ls="", ms=5, mfc=SURFACE, mec="#2a78d6", label="Greek, predict"),
+               Line2D([], [], marker="o", ls="", ms=5, mfc="#eb6834", mec="#eb6834", label="English, decide"),
+               Line2D([], [], marker="o", ls="", ms=5, mfc=SURFACE, mec="#eb6834", label="English, predict"),
+               Patch(facecolor="#f0efec", label="court granted")]
+    fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, fontsize=6, bbox_to_anchor=(0.5, -0.02))
+    fig.text(0.005, 0.55, "share of draws granting relief", rotation=90, va="center", fontsize=6.5, color=INK2)
+    fig.tight_layout(rect=(0.02, 0.07, 1, 1))
+    save(fig, out, "F2_framing_grant_share_paper")
 
 
 def fig_tokens(tokens, out):
@@ -212,8 +289,11 @@ def main():
         tok[(r["configuration"], r["prompt language"])].append(float(v or 0))
     tokens = {k: sum(v) / len(v) for k, v in tok.items()}
     fig_grid(blocks, court, configs, cases, out)
+    fig_grid_paper(blocks, court, configs, cases, out)
     fig_grant_share(blocks, court, configs, cases, out)
     fig_tokens(tokens, out)
+    if (RESULTS / 'predict-1' / 'csv' / 'blocks.csv').exists():
+        fig_framing(out)
     tables(a.run, blocks, out)
     print("written to", out)
 
