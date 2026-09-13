@@ -1,0 +1,10 @@
+# Model outputs, fingerprinted 13 September 2026 immediately after the main run and before any parsing.
+# raw/ is private until the results are released; these fingerprints commit to its contents now.
+# main-1: the main run (8,680 replies, 240 blocks, order seed 131036515, protocol commit e5bf50f).
+# pilot-1: the pilot (96 replies), not counted in any analysis.
+7d758bbcc3d0a9596240d6bca49d7de1ebb302bf5d29721a8459fa0b016cfb55      18795405  raw/main-1/raw.jsonl
+00f7465e75c4eb0f40337364a929d8f3d3c3cbab1b9d43f6c49afc12a10127ff         63147  raw/main-1/manifest.json
+88136f997cb06b39593654c33b36216b21f03a2220e38a466434c1ff17b899b6         17654  raw/main-1/console.log
+19dd8f07df629fbc27cf154e19de0503a71cf476c4997b5ddf600f7612885c69        212574  raw/pilot-1/raw.jsonl
+112c17a67b2c5e07a6fc2cabe940e43a2886d35acca9fa38d5aa6976a15b7388         13775  raw/pilot-1/manifest.json
+5a270468c4d4e9b8e233331fb6df819f2fe5ef71ca2f0e3727379c15c0478ce7          3569  raw/pilot-1/pilot_report.md
