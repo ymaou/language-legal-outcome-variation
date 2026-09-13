@@ -1,0 +1,96 @@
+kind,greek,en,de_lit,de_eng,note
+placeholder,[τοποθεσία],[location],[Ort],[Ort],27 occurrences
+placeholder,[όνομα προηγούμενης ιδιοκτήτριας εταιρείας],[name of previous owner company],[Name der früheren Eigentümergesellschaft],[Name der früheren Eigentümergesellschaft],13
+placeholder,[αριθμός προηγούμενης αγωγής],[number of previous action],[Nummer der früheren Klage],[Nummer der früheren Klage],10
+placeholder,[όνομα ενάγοντα],[name of claimant],[Name des Klägers],[Name des Klägers],9
+placeholder,[όνομα διευθυντή αιτήτριας],[name of applicant's director],[Name des Geschäftsführers der Antragstellerin],[Name des Geschäftsführers der Antragstellerin],9
+placeholder,[όνομα εταιρείας],[name of company],[Name der Gesellschaft],[Name der Gesellschaft],8
+placeholder,[όνομα προηγούμενης εκμισθώτριας εταιρείας],[name of previous landlord company],[Name der früheren Vermietergesellschaft],[Name der früheren Vermietergesellschaft],6
+placeholder,[όνομα Δήμου],[name of municipality],[Name der Gemeinde],[Name der Gemeinde],6
+placeholder,[όνομα διευθυντή καθ'ης η αίτηση],[name of respondent's director],[Name des Geschäftsführers der Antragsgegnerin],[Name des Geschäftsführers der Antragsgegnerin],4
+placeholder,[όνομα τράπεζας],[name of bank],[Name der Bank],[Name der Bank],3
+placeholder,[όνομα μητρικής εταιρείας],[name of parent company],[Name der Muttergesellschaft],[Name der Muttergesellschaft],2
+placeholder,[όνομα εναγόμενης εταιρείας],[name of defendant company],[Name der beklagten Gesellschaft],[Name der beklagten Gesellschaft],2
+placeholder,[όνομα διευθυντή καθ' ων η αίτηση],[name of respondents' director],[Name des Geschäftsführers der Antragsgegner],[Name des Geschäftsführers der Antragsgegner],2
+placeholder,[αριθμός εκκρεμούσας παράλληλης αγωγής],[number of pending parallel action],[Nummer der anhängigen Parallelklage],[Nummer der anhängigen Parallelklage],2
+placeholder,[όνομα ομνύοντος],[name of deponent],[Name des Erklärenden],[Name des Erklärenden],1
+placeholder,[όνομα εταιρείας εκτιμητών],[name of valuers' firm],[Name des Sachverständigenbüros],[Name des Sachverständigenbüros],1
+placeholder,[όνομα εκτιμητή],[name of valuer],[Name des Sachverständigen],[Name des Sachverständigen],1
+placeholder,[όνομα αιτήτριας εταιρείας],[name of applicant company],[Name der antragstellenden Gesellschaft],[Name der antragstellenden Gesellschaft],1
+placeholder,[αριθμός αίτησης εκκαθάρισης],[number of winding-up petition],[Nummer des Liquidationsantrags],[Nummer des Liquidationsantrags],1
+placeholder,[αρ. αυτοκινήτου],[vehicle registration number],[Kfz-Kennzeichen],[Kfz-Kennzeichen],1
+placeholder,[αρ. άδειας οικοδομής],[building permit number],[Nummer der Baugenehmigung],[Nummer der Baugenehmigung],1
+placeholder,[αρ οικοπέδου],[plot number],[Grundstücksnummer],[Grundstücksnummer],1
+term,συνοπτική απόφαση,summary judgment,summarisches Urteil,Summary Judgment,Rule 5 — Part 24 vocabulary; the two German arms differ here
+term,πραγματική προοπτική επιτυχίας,real prospect of success,realistische Erfolgsaussicht,real prospect of success,Rule 5 — Part 24 vocabulary
+term,επιτακτικός λόγος,compelling reason,zwingender Grund,compelling reason,Rule 5 — Part 24 vocabulary
+term,διάταγμα υπό όρους,conditional order,bedingte Anordnung,Conditional Order,Rule 5 — Part 24 vocabulary
+term,διαγραφή της απαίτησης,striking out of the claim,Streichung des Anspruchs,Striking Out of the claim,"Rule 5 — Part 24 vocabulary; de_lit amended 13 Sep 2026 from 'Streichung der Klage' to agree with Anspruch for απαίτηση, as DE-lit C1099 L13 itself renders it"
+term,απόρριψη της αίτησης,dismissal of the application,Abweisung des Antrags,Abweisung des Antrags,Rule 5
+term,δίκη,trial,Verhandlung,trial,Rule 5 — Part 24 vocabulary (limb b)
+term,Μέρος 24,Part 24,Teil 24,Part 24,Rule 5 — Part 24 vocabulary
+term,Δ.18,Order 18,Anordnung 18,Order 18,Rule 5 — old Order 18
+term,Κανονισμοί Πολιτικής Δικονομίας 2023,Civil Procedure Rules 2023,Zivilprozessregeln 2023,Civil Procedure Rules 2023,Rule 5 — Part 24 vocabulary
+term,αιτήτρια,applicant,Antragstellerin,Antragstellerin,Rule 5
+term,αιτητής,applicant,Antragsteller,Antragsteller,Rule 5
+term,καθ' ης η αίτηση,respondent,Antragsgegnerin,Antragsgegnerin,Rule 5
+term,καθ' ου η αίτηση,respondent,Antragsgegner,Antragsgegner,Rule 5
+term,καθ' ων η αίτηση,respondents,Antragsgegner,Antragsgegner,Rule 5
+term,ενάγων,claimant,Kläger,Kläger,Rule 5
+term,ενάγουσα,claimant,Klägerin,Klägerin,Rule 5
+term,εναγόμενος,defendant,Beklagter,Beklagter,Rule 5
+term,εναγόμενη,defendant,Beklagte,Beklagte,Rule 5
+term,υπεράσπιση,defence,Verteidigung,Verteidigung,Rule 5
+term,ένορκη δήλωση,affidavit,eidesstattliche Erklärung,eidesstattliche Erklärung,Rule 5
+protect,ΕΔ-xx affidavit labels,verbatim,verbatim,verbatim,Rule 3 — decided 12 Sep 2026: deponent initials in affidavit labels are kept as identifiers in every arm; QA check `labels`
+organ,Επαρχιακό Δικαστήριο,District Court,Bezirksgericht,Bezirksgericht,Rule 7
+organ,Δικαστήριο Ελέγχου Ενοικιάσεων,Rent Control Court,Mietkontrollgericht,Mietkontrollgericht,Rule 7
+organ,Κτηματολόγιο,Land Registry,Katasteramt,Katasteramt,Rule 7
+organ,Έφορος Εταιρειών,Registrar of Companies,Handelsregister,Handelsregister,Rule 7
+organ,Πολεοδομία,Town Planning Department,Stadtplanungsamt,Stadtplanungsamt,Rule 7
+organ,Υπουργείο Εσωτερικών,Ministry of the Interior,Innenministerium,Innenministerium,Rule 7
+organ,Αστυνομία,Police,Polizei,Polizei,Rule 7
+organ,Λτδ,Ltd,Ltd,Ltd,Rule 7
+organ,κ.,Mr,Herr,Herr,Rule 7
+organ,κα,Ms,Frau,Frau,Rule 7
+organ,αρ.,No.,Nr.,Nr.,Rule 7
+organ,Ν.,Law,Gesetz,Gesetz,Rule 7 — in a statute citation
+organ,Νόμος,Law,Gesetz,Gesetz,Rule 7 — in a statute citation
+protect,ΚΔΠ,verbatim,verbatim,verbatim,Rule 6 — regulatory instrument prefix
+term,Τεκμήριο,Exhibit,Anlage,Anlage,added by the C1026 pilot
+term,λόγοι ένστασης,grounds of opposition,Einwendungsgründe,Einwendungsgründe,added by the C1026 pilot
+term,αδικαιολόγητος πλουτισμός,unjust enrichment,ungerechtfertigte Bereicherung,ungerechtfertigte Bereicherung,added by the C1026 pilot
+term,αγώγιμο δικαίωμα,cause of action,Klagegrund,Klagegrund,added by the C1026 pilot
+term,δικόγραφα,pleadings,Schriftsätze,Schriftsätze,added by the C1026 pilot
+term,επίδοση,service,Zustellung,Zustellung,added by the C1026 pilot
+term,νομολογία,case law,Rechtsprechung,Rechtsprechung,added by the C1026 pilot
+term,δικηγόρος,advocate,Rechtsanwalt,Rechtsanwalt,"added by the C1026 pilot — advocate, not lawyer/solicitor"
+organ,Δικαστήριο,the Court,das Gericht,das Gericht,added by the C1026 pilot
+organ,Κυπριακή Δημοκρατία,Republic of Cyprus,Republik Zypern,Republik Zypern,added by the C1026 pilot
+term,πραγματική προοπτική επιτυχούς υπεράσπισης,real prospect of a successful defence,realistische Erfolgsaussicht einer Verteidigung,real prospect of success einer Verteidigung,"Rule 5 — Part 24 vocabulary (r 24.2(1)(α)(ii), r 24.4(2)(β)); renderings as in File A C1026 L13; added 13 Sep 2026 for the rule text"
+term,απαίτηση,claim,Anspruch,Anspruch,"added 13 Sep 2026 for the rule text; English as throughout File A; German Anspruch, the majority rendering in File A (84 of 102 in lines rendering απαίτηση; also Forderung 9, Klage 9)"
+term,ζήτημα,issue,Frage,Frage,added 13 Sep 2026 for the rule text; as in File A C1026 L37
+term,συγκεκριμένο ζήτημα,particular issue,bestimmte Frage,bestimmte Frage,"added 13 Sep 2026 for the rule text (r 24.1(1), r 24.2(1))"
+term,διάταγμα,order,Anordnung,Anordnung,added 13 Sep 2026 for the rule text; as in File A C0990 L10
+term,σημείωμα εμφάνισης,notice of appearance,Erscheinungsvermerk,Erscheinungsvermerk,"added 13 Sep 2026 for the rule text (r 24.3(1)); as in File A C1195 L27, C1387 L53"
+term,ακρόαση,hearing,Anhörung,Anhörung,"added 13 Sep 2026 for the rule text; as in File A C1423 L261, C1621 L49"
+term,μαρτυρία,evidence,Beweisvorbringen,Beweisvorbringen,added 13 Sep 2026 for the rule text; as in File A C1195 L105
+term,γραπτή μαρτυρία,written evidence,schriftliches Beweisvorbringen,schriftliches Beweisvorbringen,"added 13 Sep 2026 for the rule text; as in File A C0990 L93, C1387 L125"
+term,παραμερισμός,setting aside,Beiseitesetzung,Beiseitesetzung,added 13 Sep 2026 for the rule text (r 24.7); as in File A C1099 L13
+term,νομικό σημείο,legal point,Rechtspunkt,Rechtspunkt,added 13 Sep 2026 for the rule text (r 24.4(2)(α)); as in File A C1460 L134
+term,εκδικάζω,try,verhandeln,verhandeln,added 13 Sep 2026 for the rule text (r 24.4(2)(β)); as in File A C1292 L16
+term,καταχώριση,filing,Einreichung,Einreichung,added 13 Sep 2026 for the rule text; as in File A C0990 L40
+term,καταχωρίζω,file,einreichen,einreichen,added 13 Sep 2026 for the rule text; as in File A C1026 L43
+term,δικόγραφο,pleading,Schriftsatz,Schriftsatz,added 13 Sep 2026 for the rule text (r 24.6(2)); singular of the δικόγραφα row
+term,Μέρος 23,Part 23,Teil 23,Part 23,Rule 5 — follows the Μέρος 24 row; added 13 Sep 2026 for the rule text (r 24.4(1))
+term,κανονισμός,rule,Regel,Regel,added 13 Sep 2026 for the rule text (r 24.4(3)); follows the Κανονισμοί Πολιτικής Δικονομίας 2023 row
+term,διάδικος,party,Partei,Partei,added 13 Sep 2026 for the rule text
+term,απόφαση επί της απαίτησης,judgment on the claim,Urteil über den Anspruch,Judgment on the claim,Rule 5 — Part 24 vocabulary (r 24.6(1)(α)); not in File A; added 13 Sep 2026 for the rule text
+term,διαγραφή ή απόρριψη της απαίτησης,striking out or dismissal of the claim,Streichung oder Abweisung des Anspruchs,Striking Out oder Abweisung des Anspruchs,Rule 5 — Part 24 vocabulary (r 24.6(1)(β)); not in File A; added 13 Sep 2026 for the rule text
+term,απόρριψη της απαίτησης,dismissal of the claim,Abweisung des Anspruchs,Abweisung des Anspruchs,not in File A; added 13 Sep 2026 for the rule text (r 24.6(2))
+term,δήλωση αληθείας,statement of truth,Wahrheitserklärung,Wahrheitserklärung,not in File A; added 13 Sep 2026 for the rule text (r 24.5(5))
+term,αυτεπάγγελτα,of its own initiative,von Amts wegen,von Amts wegen,"not in File A; added 13 Sep 2026 for the rule text (r 24.3(3), r 24.5(3))"
+term,οδηγίες,directions,Weisungen,Weisungen,"not in File A; added 13 Sep 2026 for the rule text (r 24.5, r 24.6(3)); Weisungen, not Anordnung, which renders διάταγμα"
+term,διαχείριση της υπόθεσης,case management,Verfahrensleitung,Verfahrensleitung,not in File A; added 13 Sep 2026 for the rule text (r 24.6(3)(β))
+term,διαφοροποίηση,variation,Abänderung,Abänderung,not in File A; added 13 Sep 2026 for the rule text (r 24.7(1))
+term,άδεια,permission,Erlaubnis,Erlaubnis,"of the court (r 24.3(1)); not in File A; added 13 Sep 2026 for the rule text; permission rather than leave, following the English CPR vocabulary the glossary already uses"

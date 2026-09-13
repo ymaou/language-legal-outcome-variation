@@ -1,0 +1,44 @@
+# Files kept private, fingerprinted 13 September 2026, before any model was run.
+# 1 original: the ten judgments as fetched. 2 working: the edited copies carrying the cut marker.
+# 4 sealed: the half of each judgment below the cut (the court's reasoning and order), which no
+# model and nothing on the run side reads. prompts/ and rule text/: the published prompt and rule
+# files as kept privately, with their provenance header comments; the published copies are the
+# same text with those comments removed. Paths are relative to the private working folder.
+07bb7428ae314f47b3df1d478352b98af637c82889d678b9136a2241c8148ccf       83021  10 cases/1 original/C0990.md
+9c251659bc283921f5dd82e3c97b844c69948bd91d21bde2aec98dba9501b1bf       27274  10 cases/1 original/C1026.md
+2dcda9078d1be6d64a9dbffa55b3237474a32559916aec22bd6de04736df8066       70642  10 cases/1 original/C1099.md
+a7345973a847acde513e1a05fbf4a21074069e1dc39744ce827a174509268153       72027  10 cases/1 original/C1195.md
+3d74d0e6677f9098b39cb1f7a3c15fe59116bdc9b433502cc3f971e4016ac800       64504  10 cases/1 original/C1292.md
+fec7d7fc5cb1ea0259e6879e1edde2aebc30cd0cc77a37770f52259a96ca5fc9       30053  10 cases/1 original/C1316.md
+4a97655e422195f572a34cce117358fa307de261dd2d48b3eec3e5115860b39f       64949  10 cases/1 original/C1387.md
+e1778c9c3e71efd8e098e6e8dddf24962411c6c227f601781c555cc5f7d75a74       82804  10 cases/1 original/C1423.md
+6cfc9c2a73b53640f1ddcbefd1b8420412575863cfa35d8cb1948e0271c90554       84962  10 cases/1 original/C1460.md
+5b6f9a9392ee1395e8567d9335d1ccf004e6ae5ac83380e3acffae0fe43580b0       99582  10 cases/1 original/C1621.md
+fc8d239786f3b8791c9b0a74330455baf04abb3d404b959868d436927c6d5e81       80473  10 cases/2 working/C0990.md
+8efac40497b5114f42027fc99454fa864891dab86b6647c0a870854130ae4c98       25787  10 cases/2 working/C1026.md
+107985c3786f597a95afe64d5455b51c50ba230eead7db20deb343f8392b37cd       69443  10 cases/2 working/C1099.md
+6db0a952775f58063975b0d36ab25153345a981ae3c7008ea0729c0b65f85894       69089  10 cases/2 working/C1195.md
+a9ce6502b278a1e7a1707d1081194ec6906e1b2d0b0ef6320b54b9dd4608359a       60337  10 cases/2 working/C1292.md
+8422f1612a093df292dac25d886d30b3136c99867c83aaa6e1a0e701baab6234       28822  10 cases/2 working/C1316.md
+e9b19f8ce184aa9c14fb19791d0f9bd31eaa4ba991071df450ecc9e2b8b8b921       61716  10 cases/2 working/C1387.md
+46bfeb2dc589b5c5a3d0e21e98e41d744b01ae2e15221dba8f06508e704672a1       81893  10 cases/2 working/C1423.md
+f1425c16c6779c683c2838f130b9801e9b0e5963bca67809bd872d0531df719c       83132  10 cases/2 working/C1460.md
+c8c1cf50e1af8b4890c2e37322e2d0638f6ee212dafc8711eca9dc9c6af8e06a       96808  10 cases/2 working/C1621.md
+01166f5e5e5c37b8d8c755b2a01ce4750db8ee16f00d761ea73e21e22fb255f9       52762  10 cases/4 sealed/C0990.md
+4c97a286504d65c8fad6254c7076608a7421b291f5b82bbc92a36cec2b5c0223       15594  10 cases/4 sealed/C1026.md
+864a561fd0d653d04e850c3957e79059cf2e08c702961ca888d070019c7251c5       57670  10 cases/4 sealed/C1099.md
+22d4944427aa250c8795c4d90572518daec2df9d466b69f5c23de6588fd01b91       48358  10 cases/4 sealed/C1195.md
+95d0c960ea15905f5c265c715117cc3bd7a0cf4173a8fd01a838eb6a172224ba       47621  10 cases/4 sealed/C1292.md
+ea3e9410ea45625e61bc6760ba835dd13a60ff29e06036d5c091676083491452       16444  10 cases/4 sealed/C1316.md
+41707aeb64bb3c6747065b6d48dda061094b461315384252899f3f3a2aa62b04       40086  10 cases/4 sealed/C1387.md
+33f789d0ca97f6401fab0ec58de222aca7905920c5611a87134fdc39d284a62a       41146  10 cases/4 sealed/C1423.md
+d04697a8a1790ce8c0d8a163be448665ed1cca02864722dff440a71065dc13fc       56322  10 cases/4 sealed/C1460.md
+a8bccef1f925f5ea729b0c6c5fe85ba00ac55cecc2f01b8a9dd565deddef1b72       51217  10 cases/4 sealed/C1621.md
+5ba815b282373d344e256ddc0030e202397aafeb70734294bf21f9b05458cad2        4072  prompts/prompt_el.md
+4343db95e95911a029d57f5c8682aa250660ca1609453e1aa87e27f8e5e1f647        2788  prompts/prompt_en.md
+ae375d62407f956281dcfa0cf551c51eb60c85185e30e8363ffbf94434fed227        2306  prompts/prompt_de-lit.md
+807f416482bca35d7d8105073ada3980fc01175de7cc7b9c393301b735092fc6        2549  prompts/prompt_de-eng.md
+b4d457732cc1ef179243d4a6d261d662de93e09c9c64d96ee61044d66da0e40f       11417  prompts/rule text/part24_el_official.md
+8eb50fa267539b1a413770030fa0f09f5da3c71af94f3cf2665681ec1616e146        7470  prompts/rule text/part24_en.md
+1aa586a73712f4f57300da3cdab8d461e36384a289598342a39249d3461e3b03        6907  prompts/rule text/part24_de-lit.md
+9a55b0ae600a077338fd4a23aa0797c69c6631be9421bb9b068c4004e7a7a06f        7092  prompts/rule text/part24_de-eng.md
