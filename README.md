@@ -11,9 +11,9 @@ Associated with a paper under submission. **Work in progress**: the corpus and r
 | `protocol/` | Study design, model and parameter decisions, codebook |
 | `prompts/` | Prompt templates and the text of Part 24, one per language |
 | `data/` | Case list; anonymised source texts and their translations |
-| `raw/` | Model outputs, one JSON line per draw, never edited |
+| `raw/` | Model outputs, one JSON line per call, never edited |
 | `results/` | Parsed draws, tables, coded analysis |
-| `scripts/` | Translation checks, job construction, runner, parser, analysis |
+| `scripts/` | Run construction, runner, reply parser, pilot report; analysis to follow |
 
 ## Source material
 
@@ -22,13 +22,17 @@ First-instance decisions of the District Courts of Cyprus, from [CyLaw](https://
 ## Running
 
 ```
+python -m venv .venv                                   # then activate it
 pip install -r requirements.txt
-cp .env.example .env            # add API keys
-python scripts/build_jobs.py --dry-run
-python scripts/run.py           # resumable
-python scripts/parse.py
-python scripts/analyse.py
+cp .env.example .env                                   # add API keys
+python scripts/build_jobs.py --run pilot-1 --mode pilot
+python scripts/run.py --run pilot-1                    # resumable; --dry-run tests without API calls
+python scripts/pilot_report.py --run pilot-1
+python scripts/build_jobs.py --run main-1 --mode main  # or --mode reduced: 20 draws per arm
+python scripts/run.py --run main-1
 ```
+
+`run.py` checks every file in `FROZEN.sha256` before calling a model and appends one line per call to `raw/<run>/raw.jsonl`. The analysis scripts are added with the analysis plan.
 
 API models cannot be replayed bit-for-bit. Every draw is logged with its model identifier, parameters and response metadata.
 

@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Model outputs stay out of git until the outputs freeze (freeze-log.md, freeze 3)
+raw/
+
+# Analysis outputs stay out of git until the results are released
+results/
