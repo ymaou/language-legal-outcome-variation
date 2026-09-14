@@ -21,6 +21,10 @@ Parties, deponents, companies, localities and other proceedings are replaced by 
 
 Cases: C0990, C1026, C1099, C1195, C1292, C1316, C1387, C1423, C1460, C1621. The identifiers are opaque; the case list with the court's disposals is added after the analysis plan is frozen.
 
+## `changes/`
+
+One page per case comparing the Greek stimulus with the judgment as published, word by word. Every edit is marked by type: names, places and numbers replaced by placeholders; passages removed, with their length in words; the heading of the judgment removed; and changes of wording, most of them corrected misspellings or corrupted characters. What was removed is withheld, so that the pages do not identify the parties. Each page ends at the cut; nothing of the court's reasoning or order is included. Open `changes/index.html` for the summary, or `changes/summary.csv` for the counts.
+
 ## `glossary.csv`
 
 The placeholder and terminology glossary every translator worked from: one row per Greek string, with its English, DE-lit and DE-eng renderings. The two German columns differ only in the Part 24 vocabulary.
