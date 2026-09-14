@@ -1,0 +1,227 @@
+{
+ "t1": [
+  [
+   "Model",
+   "Dismissed (Greek)",
+   "Granted, full or part (Greek)",
+   "Agreement with court",
+   "MCC",
+   "F",
+   "W_en",
+   "L_EN",
+   "Δ_EN [95% CI]",
+   "W_de",
+   "L_DE",
+   "Mean D [95% CI]",
+   "Ground differs, EN / BT-en"
+  ],
+  [
+   [
+    "GPT-5.6 Terra",
+    "100%",
+    "0%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.00]",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.01]",
+    "0.10 / 0.00"
+   ],
+   [
+    "Terra, reasoning off",
+    "96%",
+    "4%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.00]",
+    "0.00",
+    "0.00",
+    "-0.04 [-0.11, 0.00]",
+    "0.40 / 0.20"
+   ],
+   [
+    "Claude Sonnet 5",
+    "88%",
+    "12%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.20",
+    "0.00",
+    "-0.20 [-0.50, 0.00]",
+    "0.10",
+    "0.00",
+    "-0.10 [-0.18, -0.04]",
+    "0.36 / 0.11"
+   ],
+   [
+    "Gemini 3.6 Flash",
+    "93%",
+    "7%",
+    "0.50",
+    "0.29",
+    "0.00",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.00]",
+    "0.10",
+    "0.10",
+    "-0.01 [-0.03, 0.01]",
+    "0.00 / 0.00"
+   ]
+  ]
+ ],
+ "t2": [
+  [
+   "Model",
+   "Dismissed (Greek), decide",
+   "Agreement with court, decide",
+   "F, decide",
+   "L_EN, decide",
+   "Mean D [95% CI], decide",
+   "Flips to refusing in EN, decide",
+   "Dismissed (Greek), predict",
+   "Agreement with court, predict",
+   "F, predict",
+   "L_EN, predict",
+   "Mean D [95% CI], predict",
+   "Flips to refusing in EN, predict"
+  ],
+  [
+   [
+    "GPT-5.6 Terra",
+    "100%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.01]",
+    "0",
+    "100%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.02 [0.00, 0.06]",
+    "0"
+   ],
+   [
+    "Terra, reasoning off",
+    "96%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "-0.04 [-0.11, 0.00]",
+    "0",
+    "100%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "0.00 [0.00, 0.00]",
+    "0"
+   ],
+   [
+    "Claude Sonnet 5",
+    "88%",
+    "0.40",
+    "0.00",
+    "0.00",
+    "-0.10 [-0.18, -0.04]",
+    "0",
+    "65%",
+    "0.50",
+    "0.18",
+    "0.33",
+    "-0.31 [-0.47, -0.15]",
+    "3"
+   ],
+   [
+    "Gemini 3.6 Flash",
+    "93%",
+    "0.50",
+    "0.00",
+    "0.00",
+    "-0.01 [-0.03, 0.01]",
+    "0",
+    "92%",
+    "0.50",
+    "0.01",
+    "0.01",
+    "-0.00 [-0.03, 0.03]",
+    "0"
+   ]
+  ]
+ ],
+ "t3": [
+  [
+   "Consideration invoked in the reasoning (share of valid replies)",
+   "GPT-5.6 Terra",
+   "Terra, reasoning off",
+   "Claude Sonnet 5",
+   "Gemini 3.6 Flash"
+  ],
+  [
+   [
+    "disputed facts / conflicting evidence",
+    "74%",
+    "73%",
+    "82%",
+    "71%"
+   ],
+   [
+    "credibility / cross-examination",
+    "11%",
+    "11%",
+    "63%",
+    "3%"
+   ],
+   [
+    "trial or full hearing needed",
+    "34%",
+    "46%",
+    "77%",
+    "57%"
+   ],
+   [
+    "fanciful / realistic distinction",
+    "19%",
+    "18%",
+    "16%",
+    "16%"
+   ],
+   [
+    "documents / expert evidence needed",
+    "7%",
+    "9%",
+    "11%",
+    "4%"
+   ],
+   [
+    "real prospect (the limb (a) phrase)",
+    "76%",
+    "75%",
+    "70%",
+    "99%"
+   ],
+   [
+    "compelling reason (the limb (b) phrase)",
+    "18%",
+    "27%",
+    "22%",
+    "6%"
+   ],
+   [
+    "mini-trial",
+    "0%",
+    "0%",
+    "0%",
+    "0%"
+   ]
+  ]
+ ]
+}
