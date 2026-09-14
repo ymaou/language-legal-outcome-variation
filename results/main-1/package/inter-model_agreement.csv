@@ -1,0 +1,37 @@
+﻿arm,model A,model B,cases where modal outcomes agree,cases,share
+Greek,GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+Greek,GPT-5.6 Terra,Claude Sonnet 5,10,10,1.00
+Greek,GPT-5.6 Terra,Gemini 3.6 Flash,9,10,0.90
+Greek,"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,10,10,1.00
+Greek,"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,9,10,0.90
+Greek,Claude Sonnet 5,Gemini 3.6 Flash,9,10,0.90
+BT via English,GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+BT via English,GPT-5.6 Terra,Claude Sonnet 5,8,10,0.80
+BT via English,GPT-5.6 Terra,Gemini 3.6 Flash,9,10,0.90
+BT via English,"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,8,10,0.80
+BT via English,"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,9,10,0.90
+BT via English,Claude Sonnet 5,Gemini 3.6 Flash,8,10,0.80
+English,GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+English,GPT-5.6 Terra,Claude Sonnet 5,10,10,1.00
+English,GPT-5.6 Terra,Gemini 3.6 Flash,9,10,0.90
+English,"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,10,10,1.00
+English,"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,9,10,0.90
+English,Claude Sonnet 5,Gemini 3.6 Flash,9,10,0.90
+BT via German,GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+BT via German,GPT-5.6 Terra,Claude Sonnet 5,9,10,0.90
+BT via German,GPT-5.6 Terra,Gemini 3.6 Flash,10,10,1.00
+BT via German,"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,9,10,0.90
+BT via German,"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,10,10,1.00
+BT via German,Claude Sonnet 5,Gemini 3.6 Flash,9,10,0.90
+German (plain terms),GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+German (plain terms),GPT-5.6 Terra,Claude Sonnet 5,10,10,1.00
+German (plain terms),GPT-5.6 Terra,Gemini 3.6 Flash,10,10,1.00
+German (plain terms),"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,10,10,1.00
+German (plain terms),"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,10,10,1.00
+German (plain terms),Claude Sonnet 5,Gemini 3.6 Flash,10,10,1.00
+German (English terms),GPT-5.6 Terra,"GPT-5.6 Terra, reasoning off",10,10,1.00
+German (English terms),GPT-5.6 Terra,Claude Sonnet 5,10,10,1.00
+German (English terms),GPT-5.6 Terra,Gemini 3.6 Flash,9,10,0.90
+German (English terms),"GPT-5.6 Terra, reasoning off",Claude Sonnet 5,10,10,1.00
+German (English terms),"GPT-5.6 Terra, reasoning off",Gemini 3.6 Flash,9,10,0.90
+German (English terms),Claude Sonnet 5,Gemini 3.6 Flash,9,10,0.90

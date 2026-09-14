@@ -1,0 +1,13 @@
+﻿configuration,model,reasoning,contrast,what it is,cases,share of cases whose modal disposal differs,95% CI low,95% CI high
+terra,gpt-5.6-terra,medium,EN vs BT-en,language contrast with one translation step between the texts,10,0.0,0.0,0.2775327999
+terra,gpt-5.6-terra,medium,DE-lit vs BT-de,the German analogue,10,0.0,0.0,0.2775327999
+terra,gpt-5.6-terra,medium,DE-lit vs DE-eng,the vocabulary contrast,10,0.0,0.0,0.2775327999
+terra-off,gpt-5.6-terra,none,EN vs BT-en,language contrast with one translation step between the texts,10,0.0,0.0,0.2775327999
+terra-off,gpt-5.6-terra,none,DE-lit vs BT-de,the German analogue,10,0.0,0.0,0.2775327999
+terra-off,gpt-5.6-terra,none,DE-lit vs DE-eng,the vocabulary contrast,10,0.0,0.0,0.2775327999
+sonnet,claude-sonnet-5,medium,EN vs BT-en,language contrast with one translation step between the texts,10,0.2,0.0566821515,0.5098375285
+sonnet,claude-sonnet-5,medium,DE-lit vs BT-de,the German analogue,10,0.1,0.0178762131,0.4041500268
+sonnet,claude-sonnet-5,medium,DE-lit vs DE-eng,the vocabulary contrast,10,0.0,0.0,0.2775327999
+gemini,gemini-3.6-flash,medium,EN vs BT-en,language contrast with one translation step between the texts,10,0.0,0.0,0.2775327999
+gemini,gemini-3.6-flash,medium,DE-lit vs BT-de,the German analogue,10,0.0,0.0,0.2775327999
+gemini,gemini-3.6-flash,medium,DE-lit vs DE-eng,the vocabulary contrast,10,0.1,0.0178762131,0.4041500268

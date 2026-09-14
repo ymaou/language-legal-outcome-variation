@@ -1,0 +1,41 @@
+﻿configuration,case,court option,court order,Greek modal (all Greek draws),"Greek modal, in words",Greek modal share,agree,court ground (model's scale)
+terra,C0990,1,granted in full,3,dismissed,1.0,False,1
+terra,C1026,3,dismissed,3,dismissed,1.0,True,1
+terra,C1099,1,granted in full,3,dismissed,1.0,False,1
+terra,C1195,2,granted in part,3,dismissed,1.0,False,1
+terra,C1292,2,granted in part,3,dismissed,1.0,False,1
+terra,C1316,3,dismissed,3,dismissed,1.0,True,1
+terra,C1387,3,dismissed,3,dismissed,1.0,True,1
+terra,C1423,1,granted in full,3,dismissed,1.0,False,1
+terra,C1460,3,dismissed,3,dismissed,1.0,True,1
+terra,C1621,1,granted in full,3,dismissed,1.0,False,1
+terra-off,C0990,1,granted in full,3,dismissed,1.0,False,1
+terra-off,C1026,3,dismissed,3,dismissed,1.0,True,1
+terra-off,C1099,1,granted in full,3,dismissed,1.0,False,1
+terra-off,C1195,2,granted in part,3,dismissed,1.0,False,1
+terra-off,C1292,2,granted in part,3,dismissed,0.6290322581,False,1
+terra-off,C1316,3,dismissed,3,dismissed,1.0,True,1
+terra-off,C1387,3,dismissed,3,dismissed,1.0,True,1
+terra-off,C1423,1,granted in full,3,dismissed,1.0,False,1
+terra-off,C1460,3,dismissed,3,dismissed,1.0,True,1
+terra-off,C1621,1,granted in full,3,dismissed,1.0,False,1
+sonnet,C0990,1,granted in full,3,dismissed,0.7096774194,False,1
+sonnet,C1026,3,dismissed,3,dismissed,0.9838709677,True,1
+sonnet,C1099,1,granted in full,3,dismissed,1.0,False,1
+sonnet,C1195,2,granted in part,3,dismissed,0.9193548387,False,1
+sonnet,C1292,2,granted in part,3,dismissed,0.8709677419,False,1
+sonnet,C1316,3,dismissed,3,dismissed,0.9193548387,True,1
+sonnet,C1387,3,dismissed,3,dismissed,1.0,True,1
+sonnet,C1423,1,granted in full,3,dismissed,0.6774193548,False,1
+sonnet,C1460,3,dismissed,3,dismissed,0.7258064516,True,1
+sonnet,C1621,1,granted in full,3,dismissed,1.0,False,1
+gemini,C0990,1,granted in full,1,granted in full,0.6451612903,True,1
+gemini,C1026,3,dismissed,3,dismissed,1.0,True,1
+gemini,C1099,1,granted in full,3,dismissed,0.9516129032,False,1
+gemini,C1195,2,granted in part,3,dismissed,1.0,False,1
+gemini,C1292,2,granted in part,3,dismissed,1.0,False,1
+gemini,C1316,3,dismissed,3,dismissed,1.0,True,1
+gemini,C1387,3,dismissed,3,dismissed,1.0,True,1
+gemini,C1423,1,granted in full,3,dismissed,1.0,False,1
+gemini,C1460,3,dismissed,3,dismissed,1.0,True,1
+gemini,C1621,1,granted in full,3,dismissed,1.0,False,1

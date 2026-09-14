@@ -1,0 +1,25 @@
+﻿configuration,model,arm,calls with a reply,valid,failure rate,failures by kind
+terra,gpt-5.6-terra,gr,620,620,0.0,none
+terra,gpt-5.6-terra,bt-en,310,310,0.0,none
+terra,gpt-5.6-terra,bt-de,310,310,0.0,none
+terra,gpt-5.6-terra,en,310,310,0.0,none
+terra,gpt-5.6-terra,de-lit,310,310,0.0,none
+terra,gpt-5.6-terra,de-eng,310,310,0.0,none
+terra-off,gpt-5.6-terra,gr,620,620,0.0,none
+terra-off,gpt-5.6-terra,bt-en,310,310,0.0,none
+terra-off,gpt-5.6-terra,bt-de,310,310,0.0,none
+terra-off,gpt-5.6-terra,en,310,310,0.0,none
+terra-off,gpt-5.6-terra,de-lit,310,310,0.0,none
+terra-off,gpt-5.6-terra,de-eng,310,310,0.0,none
+sonnet,claude-sonnet-5,gr,620,620,0.0,none
+sonnet,claude-sonnet-5,bt-en,310,310,0.0,none
+sonnet,claude-sonnet-5,bt-de,310,310,0.0,none
+sonnet,claude-sonnet-5,en,310,310,0.0,none
+sonnet,claude-sonnet-5,de-lit,310,310,0.0,none
+sonnet,claude-sonnet-5,de-eng,310,310,0.0,none
+gemini,gemini-3.6-flash,gr,620,620,0.0,none
+gemini,gemini-3.6-flash,bt-en,310,310,0.0,none
+gemini,gemini-3.6-flash,bt-de,310,310,0.0,none
+gemini,gemini-3.6-flash,en,310,310,0.0,none
+gemini,gemini-3.6-flash,de-lit,310,310,0.0,none
+gemini,gemini-3.6-flash,de-eng,310,310,0.0,none

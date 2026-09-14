@@ -1,0 +1,2484 @@
+{
+ "run": "main-1",
+ "mode": "main",
+ "created_utc": "2026-09-13T19:22:54+00:00",
+ "order_seed": 131036515,
+ "cases": [
+  "C0990",
+  "C1026",
+  "C1099",
+  "C1195",
+  "C1292",
+  "C1316",
+  "C1387",
+  "C1423",
+  "C1460",
+  "C1621"
+ ],
+ "configs": {
+  "terra": {
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "reasoning": "medium"
+  },
+  "terra-off": {
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "reasoning": "none"
+  },
+  "sonnet": {
+   "provider": "anthropic",
+   "model": "claude-sonnet-5",
+   "reasoning": "medium"
+  },
+  "gemini": {
+   "provider": "google",
+   "model": "gemini-3.6-flash",
+   "reasoning": "medium"
+  }
+ },
+ "draws_per_arm": 31,
+ "greek_draws": 62,
+ "replacement_share_of_k": 0.4,
+ "max_output_tokens": 32000,
+ "not_sent": [
+  "temperature",
+  "top_p",
+  "seed"
+ ],
+ "prices_usd_per_million_tokens": {
+  "gpt-5.6-terra": {
+   "input": 2.0,
+   "cached": 0.2,
+   "cache_write": 2.0,
+   "output": 12.0
+  },
+  "claude-sonnet-5": {
+   "input": 2.0,
+   "cached": 0.2,
+   "cache_write": 2.5,
+   "output": 10.0
+  },
+  "gemini-3.6-flash": {
+   "input": 0.75,
+   "cached": 0.075,
+   "cache_write": 0.75,
+   "output": 3.75
+  }
+ },
+ "budget_eur": 100,
+ "ceiling_eur": 150,
+ "pilot_cap_eur": 30,
+ "frozen_files_verified": 69,
+ "frozen_list_sha256": "63abb8e8fc9d45d64b1f7d667b1104af529a2aba1ea66ab52e2cf45a13d6425d",
+ "git_commit": "e5bf50fb777696ef586a452dd06fa58e1ffd5a1d",
+ "git_uncommitted_changes": false,
+ "python": "3.14.3",
+ "sdk_versions": {
+  "openai": "3.13.0",
+  "anthropic": "1.5.0",
+  "google-genai": "2.23.0"
+ },
+ "blocks": [
+  {
+   "block": "terra-off|C0990|bt-en",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 23181,
+   "prompt_sha256": "dcb537de86e1f927f913681c2db9b4fb691074f1b63a7b00ebbc2727c8ab465b",
+   "order": 0
+  },
+  {
+   "block": "sonnet|C1460|de-lit",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 24987,
+   "prompt_sha256": "f5b8710fc136c97f76052693461051cb2c4bf7cf9900c891e5d464937222e8bf",
+   "order": 1
+  },
+  {
+   "block": "sonnet|C1099|gr",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13831,
+   "prompt_sha256": "0f0e9a5823eed5973b01e76ae0cda69c95cad13f4957c1026b2de5bfc90cfa9f",
+   "order": 2
+  },
+  {
+   "block": "gemini|C1316|bt-de",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14080,
+   "prompt_sha256": "15a862a85f7aee5284ee816074a54dc5ceb772c19e798efe3e2dc23a9d35e10e",
+   "order": 3
+  },
+  {
+   "block": "terra|C1316|de-lit",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15477,
+   "prompt_sha256": "c298b267131c368a94528c456f85c432c4c44b08c99a04907070207bd945fd1f",
+   "order": 4
+  },
+  {
+   "block": "sonnet|C1621|gr",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 32635,
+   "prompt_sha256": "9d3b694fd511b67bd09fad2e023728b6dfe5e8f171a418c4b854a8770a91b5cc",
+   "order": 5
+  },
+  {
+   "block": "terra|C0990|bt-en",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 23181,
+   "prompt_sha256": "dcb537de86e1f927f913681c2db9b4fb691074f1b63a7b00ebbc2727c8ab465b",
+   "order": 6
+  },
+  {
+   "block": "sonnet|C1026|de-eng",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 14855,
+   "prompt_sha256": "038f1b9824866b6cbcfcb065747608255c298fd1083919c11e44465d6c49592e",
+   "order": 7
+  },
+  {
+   "block": "gemini|C0990|en",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 22322,
+   "prompt_sha256": "5cefac3d3b3cee1ad58533ee6a9273465a080ce267a9ef71bb9d31bc5aa00301",
+   "order": 8
+  },
+  {
+   "block": "terra|C0990|en",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 22322,
+   "prompt_sha256": "5cefac3d3b3cee1ad58533ee6a9273465a080ce267a9ef71bb9d31bc5aa00301",
+   "order": 9
+  },
+  {
+   "block": "sonnet|C1387|gr",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 19152,
+   "prompt_sha256": "de7e949ef53da4833c061abc89bf2a69882c0da5870463fdfa5379cd2bc0b9b7",
+   "order": 10
+  },
+  {
+   "block": "terra-off|C1099|de-lit",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15922,
+   "prompt_sha256": "b4aa167240f67be21371eb71d915132a121a9683cc10e53990681bc2298d05ff",
+   "order": 11
+  },
+  {
+   "block": "sonnet|C1026|en",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 12527,
+   "prompt_sha256": "c341a92cf7f1020c21034229479f95a8f469f8b0d960948c1cbd2b3a68790a48",
+   "order": 12
+  },
+  {
+   "block": "terra|C1460|de-lit",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 24987,
+   "prompt_sha256": "f5b8710fc136c97f76052693461051cb2c4bf7cf9900c891e5d464937222e8bf",
+   "order": 13
+  },
+  {
+   "block": "sonnet|C1292|de-lit",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15852,
+   "prompt_sha256": "6cbd3dd6be4d706370af153163ef09e45c8f3db8f6b6b45eff9320626e29e23e",
+   "order": 14
+  },
+  {
+   "block": "sonnet|C1099|en",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13582,
+   "prompt_sha256": "9ae7733d50e9bcfca2a9004f37bbfa328628ffa47ac205ad6ac4076fd67bae9c",
+   "order": 15
+  },
+  {
+   "block": "terra|C1195|gr",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 18651,
+   "prompt_sha256": "42112d3962d6334c534ead859a68ea11fd16089cceedc2dfeaf258a2e20664f7",
+   "order": 16
+  },
+  {
+   "block": "sonnet|C0990|en",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 22322,
+   "prompt_sha256": "5cefac3d3b3cee1ad58533ee6a9273465a080ce267a9ef71bb9d31bc5aa00301",
+   "order": 17
+  },
+  {
+   "block": "sonnet|C1099|de-lit",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15922,
+   "prompt_sha256": "b4aa167240f67be21371eb71d915132a121a9683cc10e53990681bc2298d05ff",
+   "order": 18
+  },
+  {
+   "block": "sonnet|C1026|bt-en",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13065,
+   "prompt_sha256": "7606fc9587ece2f1143c9ad1ffe24555048888e0a20f5e68c173559a43b49c4c",
+   "order": 19
+  },
+  {
+   "block": "sonnet|C1460|gr",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22180,
+   "prompt_sha256": "bc3aed033f731cf768b83c6b6c2725b6c2f2a13e29458ae7c4cfe038f6f7a3e3",
+   "order": 20
+  },
+  {
+   "block": "gemini|C1195|de-lit",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 20954,
+   "prompt_sha256": "c0e50ab122cf3a2ca7e7ffc325663614fe9cc6de3723a4200579514da28f9f1f",
+   "order": 21
+  },
+  {
+   "block": "terra|C1387|de-eng",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 21093,
+   "prompt_sha256": "ccfa36149286a5462a69c641f966a359a666de893c7ea803f9e1f136b739a780",
+   "order": 22
+  },
+  {
+   "block": "terra|C1621|en",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 32890,
+   "prompt_sha256": "2c385945de78be8b6097e51473d587c7dbb070c6411a73bdbb5042c29158d481",
+   "order": 23
+  },
+  {
+   "block": "sonnet|C1195|bt-en",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19151,
+   "prompt_sha256": "09a33dac0170bdbfe9c714da7a5fe0e0ff25f9562c79a25d60ff1cb5d040ed56",
+   "order": 24
+  },
+  {
+   "block": "sonnet|C1387|bt-en",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19404,
+   "prompt_sha256": "d05a934fe4b0c9c25adb782705697d3a32450c7f0c18ed4d8271097d747cd394",
+   "order": 25
+  },
+  {
+   "block": "terra|C1621|bt-en",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 33174,
+   "prompt_sha256": "716a784c975edc708aa46187f77b5458ae4c890d2ca4eaba5b0160c25225b683",
+   "order": 26
+  },
+  {
+   "block": "gemini|C1621|gr",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 32635,
+   "prompt_sha256": "9d3b694fd511b67bd09fad2e023728b6dfe5e8f171a418c4b854a8770a91b5cc",
+   "order": 27
+  },
+  {
+   "block": "gemini|C1621|en",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 32890,
+   "prompt_sha256": "2c385945de78be8b6097e51473d587c7dbb070c6411a73bdbb5042c29158d481",
+   "order": 28
+  },
+  {
+   "block": "terra|C1292|gr",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 14546,
+   "prompt_sha256": "ef7f5da7efde0a197fcae067575f8e879ef19e41ba724f4e9f009190bd56f9e7",
+   "order": 29
+  },
+  {
+   "block": "terra-off|C1460|gr",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22180,
+   "prompt_sha256": "bc3aed033f731cf768b83c6b6c2725b6c2f2a13e29458ae7c4cfe038f6f7a3e3",
+   "order": 30
+  },
+  {
+   "block": "terra-off|C1621|en",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 32890,
+   "prompt_sha256": "2c385945de78be8b6097e51473d587c7dbb070c6411a73bdbb5042c29158d481",
+   "order": 31
+  },
+  {
+   "block": "terra|C1423|de-lit",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 33262,
+   "prompt_sha256": "a489ccf67328a493bf78709becb15e79da5f239de0649664227b7a31380fd780",
+   "order": 32
+  },
+  {
+   "block": "terra-off|C1292|de-lit",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15852,
+   "prompt_sha256": "6cbd3dd6be4d706370af153163ef09e45c8f3db8f6b6b45eff9320626e29e23e",
+   "order": 33
+  },
+  {
+   "block": "sonnet|C0990|gr",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22886,
+   "prompt_sha256": "78dcc72a89b2b844fb28f2bc92e02ce1d82f056f0c7903938595b0167007363b",
+   "order": 34
+  },
+  {
+   "block": "sonnet|C1292|bt-en",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14681,
+   "prompt_sha256": "bca769b586eee9353c8c924311b66b7679b3c5a45003d851f1de0989015e8bfa",
+   "order": 35
+  },
+  {
+   "block": "terra|C1026|bt-de",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13054,
+   "prompt_sha256": "e00c107b8ddca99c4e4b15ba1401a778162dbd1c1707a5598818702dffd58398",
+   "order": 36
+  },
+  {
+   "block": "sonnet|C1195|gr",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 18651,
+   "prompt_sha256": "42112d3962d6334c534ead859a68ea11fd16089cceedc2dfeaf258a2e20664f7",
+   "order": 37
+  },
+  {
+   "block": "gemini|C1099|de-lit",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15922,
+   "prompt_sha256": "b4aa167240f67be21371eb71d915132a121a9683cc10e53990681bc2298d05ff",
+   "order": 38
+  },
+  {
+   "block": "sonnet|C1195|bt-de",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19036,
+   "prompt_sha256": "5cf61f39121e8ccdc3ef7d59d089b78366f8ccb07ce7c80cf7ec360289ebef09",
+   "order": 39
+  },
+  {
+   "block": "terra-off|C1195|bt-de",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19036,
+   "prompt_sha256": "5cf61f39121e8ccdc3ef7d59d089b78366f8ccb07ce7c80cf7ec360289ebef09",
+   "order": 40
+  },
+  {
+   "block": "sonnet|C0990|de-lit",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 25474,
+   "prompt_sha256": "b22a52088dbdb39cc3f3c42828c656a83873c310c3e827ae19b5a607c0245a34",
+   "order": 41
+  },
+  {
+   "block": "terra-off|C1460|bt-de",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 22577,
+   "prompt_sha256": "9624e16e16f99387e9fed09300aa59eb18d8bf9ca303a23c51b1d9fd4be1b288",
+   "order": 42
+  },
+  {
+   "block": "gemini|C1292|gr",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 14546,
+   "prompt_sha256": "ef7f5da7efde0a197fcae067575f8e879ef19e41ba724f4e9f009190bd56f9e7",
+   "order": 43
+  },
+  {
+   "block": "sonnet|C1423|de-eng",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 33168,
+   "prompt_sha256": "5b1babb1ea4168d676fb3ed279b8a8159d9ba22534af919b2a97006a4bd9e9b0",
+   "order": 44
+  },
+  {
+   "block": "terra-off|C1387|bt-de",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19409,
+   "prompt_sha256": "10c5c6905148b4a2d6f4d8dfa02bd567d3958bb502edd3e5a3b4f4cd13d2e10f",
+   "order": 45
+  },
+  {
+   "block": "terra-off|C1387|bt-en",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19404,
+   "prompt_sha256": "d05a934fe4b0c9c25adb782705697d3a32450c7f0c18ed4d8271097d747cd394",
+   "order": 46
+  },
+  {
+   "block": "gemini|C1099|en",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13582,
+   "prompt_sha256": "9ae7733d50e9bcfca2a9004f37bbfa328628ffa47ac205ad6ac4076fd67bae9c",
+   "order": 47
+  },
+  {
+   "block": "gemini|C1195|bt-de",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19036,
+   "prompt_sha256": "5cf61f39121e8ccdc3ef7d59d089b78366f8ccb07ce7c80cf7ec360289ebef09",
+   "order": 48
+  },
+  {
+   "block": "gemini|C1387|de-lit",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 21186,
+   "prompt_sha256": "bb65ffa97b7158c530c65610b88e7114c1ea578a258898e9f1a92ea3ebb6c32d",
+   "order": 49
+  },
+  {
+   "block": "terra|C0990|de-eng",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 25394,
+   "prompt_sha256": "efff357e79878edff4998ab8d67826f8d9c49925504fcd6a9157f8d358f943f1",
+   "order": 50
+  },
+  {
+   "block": "terra|C1099|de-lit",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15922,
+   "prompt_sha256": "b4aa167240f67be21371eb71d915132a121a9683cc10e53990681bc2298d05ff",
+   "order": 51
+  },
+  {
+   "block": "sonnet|C1292|bt-de",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14617,
+   "prompt_sha256": "8e28889650ae40da91f1198e281023005f780c5191765786be5f155118970ba6",
+   "order": 52
+  },
+  {
+   "block": "terra-off|C1423|de-eng",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 33168,
+   "prompt_sha256": "5b1babb1ea4168d676fb3ed279b8a8159d9ba22534af919b2a97006a4bd9e9b0",
+   "order": 53
+  },
+  {
+   "block": "terra-off|C1316|gr",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13929,
+   "prompt_sha256": "211589d26c940a002552e658a667352bcd68b836db6d3de67a4221e261996de8",
+   "order": 54
+  },
+  {
+   "block": "terra|C1195|bt-de",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19036,
+   "prompt_sha256": "5cf61f39121e8ccdc3ef7d59d089b78366f8ccb07ce7c80cf7ec360289ebef09",
+   "order": 55
+  },
+  {
+   "block": "terra|C1099|bt-de",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13948,
+   "prompt_sha256": "53f00c4d2d5433a2af1d9735e0f9a4d3493b44c80fab2b1078d7edfa3a3d37cd",
+   "order": 56
+  },
+  {
+   "block": "gemini|C1099|bt-en",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13891,
+   "prompt_sha256": "459f1095d45f50bd11beb7086f4c89f06d1bfb8aa9fa92ac9a7398ae3676aca7",
+   "order": 57
+  },
+  {
+   "block": "terra-off|C1292|bt-en",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14681,
+   "prompt_sha256": "bca769b586eee9353c8c924311b66b7679b3c5a45003d851f1de0989015e8bfa",
+   "order": 58
+  },
+  {
+   "block": "terra-off|C0990|de-lit",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 25474,
+   "prompt_sha256": "b22a52088dbdb39cc3f3c42828c656a83873c310c3e827ae19b5a607c0245a34",
+   "order": 59
+  },
+  {
+   "block": "sonnet|C1316|de-lit",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15477,
+   "prompt_sha256": "c298b267131c368a94528c456f85c432c4c44b08c99a04907070207bd945fd1f",
+   "order": 60
+  },
+  {
+   "block": "terra|C1387|de-lit",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 21186,
+   "prompt_sha256": "bb65ffa97b7158c530c65610b88e7114c1ea578a258898e9f1a92ea3ebb6c32d",
+   "order": 61
+  },
+  {
+   "block": "gemini|C1460|gr",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22180,
+   "prompt_sha256": "bc3aed033f731cf768b83c6b6c2725b6c2f2a13e29458ae7c4cfe038f6f7a3e3",
+   "order": 62
+  },
+  {
+   "block": "terra-off|C1026|en",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 12527,
+   "prompt_sha256": "c341a92cf7f1020c21034229479f95a8f469f8b0d960948c1cbd2b3a68790a48",
+   "order": 63
+  },
+  {
+   "block": "sonnet|C1316|bt-en",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14270,
+   "prompt_sha256": "0d423fad9ddf50d126579a50d504dc0d885f6bc7dde333bffeae5953bfc0770b",
+   "order": 64
+  },
+  {
+   "block": "terra-off|C1099|de-eng",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15845,
+   "prompt_sha256": "89d7317c63f2f27f87ff1f790a7f67091f579d39d0bcddfd3f168cfd8b30b822",
+   "order": 65
+  },
+  {
+   "block": "terra|C1423|bt-de",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 30550,
+   "prompt_sha256": "ae0a521d81544f818390052b6d6c13c3275466081281a7cbd0beceda66a77b9f",
+   "order": 66
+  },
+  {
+   "block": "terra|C1423|gr",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 29919,
+   "prompt_sha256": "93d0d5f9fc00ea66770f51ee867ae89f05e3aa0a45e6247c637a95d8f663bf3c",
+   "order": 67
+  },
+  {
+   "block": "sonnet|C1099|bt-en",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13891,
+   "prompt_sha256": "459f1095d45f50bd11beb7086f4c89f06d1bfb8aa9fa92ac9a7398ae3676aca7",
+   "order": 68
+  },
+  {
+   "block": "terra|C1316|de-eng",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15393,
+   "prompt_sha256": "e6887340ada59edc79d604ac84cecad0d843eed8d7b3e556817cdf78bb7d3baa",
+   "order": 69
+  },
+  {
+   "block": "sonnet|C1423|de-lit",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 33262,
+   "prompt_sha256": "a489ccf67328a493bf78709becb15e79da5f239de0649664227b7a31380fd780",
+   "order": 70
+  },
+  {
+   "block": "terra|C1026|bt-en",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13065,
+   "prompt_sha256": "7606fc9587ece2f1143c9ad1ffe24555048888e0a20f5e68c173559a43b49c4c",
+   "order": 71
+  },
+  {
+   "block": "gemini|C1423|de-eng",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 33168,
+   "prompt_sha256": "5b1babb1ea4168d676fb3ed279b8a8159d9ba22534af919b2a97006a4bd9e9b0",
+   "order": 72
+  },
+  {
+   "block": "gemini|C0990|bt-en",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 23181,
+   "prompt_sha256": "dcb537de86e1f927f913681c2db9b4fb691074f1b63a7b00ebbc2727c8ab465b",
+   "order": 73
+  },
+  {
+   "block": "gemini|C1621|bt-en",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 33174,
+   "prompt_sha256": "716a784c975edc708aa46187f77b5458ae4c890d2ca4eaba5b0160c25225b683",
+   "order": 74
+  },
+  {
+   "block": "terra|C1460|bt-de",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 22577,
+   "prompt_sha256": "9624e16e16f99387e9fed09300aa59eb18d8bf9ca303a23c51b1d9fd4be1b288",
+   "order": 75
+  },
+  {
+   "block": "gemini|C1621|de-eng",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 37306,
+   "prompt_sha256": "d13749107ca8854040fc2124cc35419713305f17a97e4d4b6f00351512dc4ba1",
+   "order": 76
+  },
+  {
+   "block": "terra-off|C1026|gr",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 12855,
+   "prompt_sha256": "e3e987978a8e0c1e3bed09bc0803bfbe8584ced395d5fd6a9124043a02c69693",
+   "order": 77
+  },
+  {
+   "block": "terra-off|C1387|de-eng",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 21093,
+   "prompt_sha256": "ccfa36149286a5462a69c641f966a359a666de893c7ea803f9e1f136b739a780",
+   "order": 78
+  },
+  {
+   "block": "gemini|C1423|en",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 28863,
+   "prompt_sha256": "6c807a36244f75e8ef0ec97d25e3a8b891e3eeb5eb645e18cb8942ba383a8794",
+   "order": 79
+  },
+  {
+   "block": "sonnet|C1621|de-lit",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 37413,
+   "prompt_sha256": "e55ec1a41817859e8f731da1817fc504d2ab02e90f45e199f0c0adb57dfc23e3",
+   "order": 80
+  },
+  {
+   "block": "terra-off|C1316|de-eng",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15393,
+   "prompt_sha256": "e6887340ada59edc79d604ac84cecad0d843eed8d7b3e556817cdf78bb7d3baa",
+   "order": 81
+  },
+  {
+   "block": "terra|C1292|en",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 14003,
+   "prompt_sha256": "d9b22055bedb0fd9a03477c510826791d37649acd9cd1b6306c19996f703e81f",
+   "order": 82
+  },
+  {
+   "block": "gemini|C1292|de-eng",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15754,
+   "prompt_sha256": "f8af1d8a135b20aec22297f08aec30a3572e0bc2f5a320b52afb4d97092ef9a3",
+   "order": 83
+  },
+  {
+   "block": "sonnet|C1292|de-eng",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15754,
+   "prompt_sha256": "f8af1d8a135b20aec22297f08aec30a3572e0bc2f5a320b52afb4d97092ef9a3",
+   "order": 84
+  },
+  {
+   "block": "terra|C1292|de-lit",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15852,
+   "prompt_sha256": "6cbd3dd6be4d706370af153163ef09e45c8f3db8f6b6b45eff9320626e29e23e",
+   "order": 85
+  },
+  {
+   "block": "terra|C1621|de-lit",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 37413,
+   "prompt_sha256": "e55ec1a41817859e8f731da1817fc504d2ab02e90f45e199f0c0adb57dfc23e3",
+   "order": 86
+  },
+  {
+   "block": "sonnet|C0990|bt-en",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 23181,
+   "prompt_sha256": "dcb537de86e1f927f913681c2db9b4fb691074f1b63a7b00ebbc2727c8ab465b",
+   "order": 87
+  },
+  {
+   "block": "terra|C1195|en",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18543,
+   "prompt_sha256": "c8dfff23ca8f5eee5bf459d2cbb993aedd7916ff097e67fc40171af2ae8c2eed",
+   "order": 88
+  },
+  {
+   "block": "terra|C1460|bt-en",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 22456,
+   "prompt_sha256": "f303a825431d3d64c74d30239694f542e42ab69e116e219b4792c736d6879beb",
+   "order": 89
+  },
+  {
+   "block": "sonnet|C1195|de-eng",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 20861,
+   "prompt_sha256": "cd276c5321f3e488d8aaebd5f885a764238d18c5a276ba7b28b8d9617ce82d11",
+   "order": 90
+  },
+  {
+   "block": "terra|C1621|bt-de",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 33212,
+   "prompt_sha256": "12a499eb3193e46184dc5419f973bf77e8e312e95b35ccbe3ec44cc47adeeabc",
+   "order": 91
+  },
+  {
+   "block": "terra|C1292|bt-de",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14617,
+   "prompt_sha256": "8e28889650ae40da91f1198e281023005f780c5191765786be5f155118970ba6",
+   "order": 92
+  },
+  {
+   "block": "gemini|C1026|gr",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 12855,
+   "prompt_sha256": "e3e987978a8e0c1e3bed09bc0803bfbe8584ced395d5fd6a9124043a02c69693",
+   "order": 93
+  },
+  {
+   "block": "terra|C1195|bt-en",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19151,
+   "prompt_sha256": "09a33dac0170bdbfe9c714da7a5fe0e0ff25f9562c79a25d60ff1cb5d040ed56",
+   "order": 94
+  },
+  {
+   "block": "terra-off|C1621|de-lit",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 37413,
+   "prompt_sha256": "e55ec1a41817859e8f731da1817fc504d2ab02e90f45e199f0c0adb57dfc23e3",
+   "order": 95
+  },
+  {
+   "block": "terra-off|C0990|en",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 22322,
+   "prompt_sha256": "5cefac3d3b3cee1ad58533ee6a9273465a080ce267a9ef71bb9d31bc5aa00301",
+   "order": 96
+  },
+  {
+   "block": "terra|C1026|en",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 12527,
+   "prompt_sha256": "c341a92cf7f1020c21034229479f95a8f469f8b0d960948c1cbd2b3a68790a48",
+   "order": 97
+  },
+  {
+   "block": "terra-off|C1387|en",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18851,
+   "prompt_sha256": "83c20a6f17071c93ecc19606cd04624584347bb68ac00de5e77d4a228264649a",
+   "order": 98
+  },
+  {
+   "block": "terra-off|C1316|en",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13553,
+   "prompt_sha256": "f9b09dfdbb712922ced298c94c47670d9af782283551cbdb846b3c075ed96f53",
+   "order": 99
+  },
+  {
+   "block": "terra|C1099|gr",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13831,
+   "prompt_sha256": "0f0e9a5823eed5973b01e76ae0cda69c95cad13f4957c1026b2de5bfc90cfa9f",
+   "order": 100
+  },
+  {
+   "block": "sonnet|C1621|bt-en",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 33174,
+   "prompt_sha256": "716a784c975edc708aa46187f77b5458ae4c890d2ca4eaba5b0160c25225b683",
+   "order": 101
+  },
+  {
+   "block": "sonnet|C1423|gr",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 29919,
+   "prompt_sha256": "93d0d5f9fc00ea66770f51ee867ae89f05e3aa0a45e6247c637a95d8f663bf3c",
+   "order": 102
+  },
+  {
+   "block": "terra|C0990|gr",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22886,
+   "prompt_sha256": "78dcc72a89b2b844fb28f2bc92e02ce1d82f056f0c7903938595b0167007363b",
+   "order": 103
+  },
+  {
+   "block": "gemini|C1621|de-lit",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 37413,
+   "prompt_sha256": "e55ec1a41817859e8f731da1817fc504d2ab02e90f45e199f0c0adb57dfc23e3",
+   "order": 104
+  },
+  {
+   "block": "gemini|C1316|de-eng",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15393,
+   "prompt_sha256": "e6887340ada59edc79d604ac84cecad0d843eed8d7b3e556817cdf78bb7d3baa",
+   "order": 105
+  },
+  {
+   "block": "gemini|C1026|de-lit",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 14943,
+   "prompt_sha256": "ab96d937ba241b31b3d8a739d31e83471e29bbf278c02e59c0c3d6d28288845f",
+   "order": 106
+  },
+  {
+   "block": "sonnet|C1195|en",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18543,
+   "prompt_sha256": "c8dfff23ca8f5eee5bf459d2cbb993aedd7916ff097e67fc40171af2ae8c2eed",
+   "order": 107
+  },
+  {
+   "block": "gemini|C1621|bt-de",
+   "config": "gemini",
+   "case": "C1621",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 33212,
+   "prompt_sha256": "12a499eb3193e46184dc5419f973bf77e8e312e95b35ccbe3ec44cc47adeeabc",
+   "order": 108
+  },
+  {
+   "block": "terra-off|C1292|gr",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 14546,
+   "prompt_sha256": "ef7f5da7efde0a197fcae067575f8e879ef19e41ba724f4e9f009190bd56f9e7",
+   "order": 109
+  },
+  {
+   "block": "terra-off|C1026|de-eng",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 14855,
+   "prompt_sha256": "038f1b9824866b6cbcfcb065747608255c298fd1083919c11e44465d6c49592e",
+   "order": 110
+  },
+  {
+   "block": "terra-off|C1423|bt-de",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 30550,
+   "prompt_sha256": "ae0a521d81544f818390052b6d6c13c3275466081281a7cbd0beceda66a77b9f",
+   "order": 111
+  },
+  {
+   "block": "gemini|C1316|de-lit",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15477,
+   "prompt_sha256": "c298b267131c368a94528c456f85c432c4c44b08c99a04907070207bd945fd1f",
+   "order": 112
+  },
+  {
+   "block": "terra-off|C0990|bt-de",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 23259,
+   "prompt_sha256": "2c70529cc7ffd1800835de5894e39794649e29a257214178bdd8dc4fc52544f3",
+   "order": 113
+  },
+  {
+   "block": "terra|C1460|gr",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22180,
+   "prompt_sha256": "bc3aed033f731cf768b83c6b6c2725b6c2f2a13e29458ae7c4cfe038f6f7a3e3",
+   "order": 114
+  },
+  {
+   "block": "gemini|C1292|de-lit",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15852,
+   "prompt_sha256": "6cbd3dd6be4d706370af153163ef09e45c8f3db8f6b6b45eff9320626e29e23e",
+   "order": 115
+  },
+  {
+   "block": "gemini|C1460|bt-en",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 22456,
+   "prompt_sha256": "f303a825431d3d64c74d30239694f542e42ab69e116e219b4792c736d6879beb",
+   "order": 116
+  },
+  {
+   "block": "sonnet|C1316|de-eng",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15393,
+   "prompt_sha256": "e6887340ada59edc79d604ac84cecad0d843eed8d7b3e556817cdf78bb7d3baa",
+   "order": 117
+  },
+  {
+   "block": "sonnet|C1387|bt-de",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19409,
+   "prompt_sha256": "10c5c6905148b4a2d6f4d8dfa02bd567d3958bb502edd3e5a3b4f4cd13d2e10f",
+   "order": 118
+  },
+  {
+   "block": "gemini|C1026|bt-en",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13065,
+   "prompt_sha256": "7606fc9587ece2f1143c9ad1ffe24555048888e0a20f5e68c173559a43b49c4c",
+   "order": 119
+  },
+  {
+   "block": "gemini|C1292|en",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 14003,
+   "prompt_sha256": "d9b22055bedb0fd9a03477c510826791d37649acd9cd1b6306c19996f703e81f",
+   "order": 120
+  },
+  {
+   "block": "terra-off|C1316|bt-en",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14270,
+   "prompt_sha256": "0d423fad9ddf50d126579a50d504dc0d885f6bc7dde333bffeae5953bfc0770b",
+   "order": 121
+  },
+  {
+   "block": "gemini|C1460|en",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 21849,
+   "prompt_sha256": "1f2b7889433c41d918d3278c099263fd6efe94ee2d97c2bbd5b0ee0b17ceb003",
+   "order": 122
+  },
+  {
+   "block": "terra-off|C1423|bt-en",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 30498,
+   "prompt_sha256": "af4fbfa76efd19bd737ec1634f2d37ce4c7e06f8fc51f0247f645f44a04b4f98",
+   "order": 123
+  },
+  {
+   "block": "terra-off|C1099|en",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13582,
+   "prompt_sha256": "9ae7733d50e9bcfca2a9004f37bbfa328628ffa47ac205ad6ac4076fd67bae9c",
+   "order": 124
+  },
+  {
+   "block": "sonnet|C1387|de-lit",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 21186,
+   "prompt_sha256": "bb65ffa97b7158c530c65610b88e7114c1ea578a258898e9f1a92ea3ebb6c32d",
+   "order": 125
+  },
+  {
+   "block": "terra-off|C1195|bt-en",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19151,
+   "prompt_sha256": "09a33dac0170bdbfe9c714da7a5fe0e0ff25f9562c79a25d60ff1cb5d040ed56",
+   "order": 126
+  },
+  {
+   "block": "terra-off|C1316|bt-de",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14080,
+   "prompt_sha256": "15a862a85f7aee5284ee816074a54dc5ceb772c19e798efe3e2dc23a9d35e10e",
+   "order": 127
+  },
+  {
+   "block": "sonnet|C1387|de-eng",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 21093,
+   "prompt_sha256": "ccfa36149286a5462a69c641f966a359a666de893c7ea803f9e1f136b739a780",
+   "order": 128
+  },
+  {
+   "block": "terra-off|C1099|bt-en",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13891,
+   "prompt_sha256": "459f1095d45f50bd11beb7086f4c89f06d1bfb8aa9fa92ac9a7398ae3676aca7",
+   "order": 129
+  },
+  {
+   "block": "sonnet|C1316|en",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13553,
+   "prompt_sha256": "f9b09dfdbb712922ced298c94c47670d9af782283551cbdb846b3c075ed96f53",
+   "order": 130
+  },
+  {
+   "block": "terra|C1423|en",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 28863,
+   "prompt_sha256": "6c807a36244f75e8ef0ec97d25e3a8b891e3eeb5eb645e18cb8942ba383a8794",
+   "order": 131
+  },
+  {
+   "block": "terra|C1316|en",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13553,
+   "prompt_sha256": "f9b09dfdbb712922ced298c94c47670d9af782283551cbdb846b3c075ed96f53",
+   "order": 132
+  },
+  {
+   "block": "terra|C1387|bt-de",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19409,
+   "prompt_sha256": "10c5c6905148b4a2d6f4d8dfa02bd567d3958bb502edd3e5a3b4f4cd13d2e10f",
+   "order": 133
+  },
+  {
+   "block": "terra-off|C1099|gr",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13831,
+   "prompt_sha256": "0f0e9a5823eed5973b01e76ae0cda69c95cad13f4957c1026b2de5bfc90cfa9f",
+   "order": 134
+  },
+  {
+   "block": "gemini|C0990|bt-de",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 23259,
+   "prompt_sha256": "2c70529cc7ffd1800835de5894e39794649e29a257214178bdd8dc4fc52544f3",
+   "order": 135
+  },
+  {
+   "block": "terra|C1195|de-eng",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 20861,
+   "prompt_sha256": "cd276c5321f3e488d8aaebd5f885a764238d18c5a276ba7b28b8d9617ce82d11",
+   "order": 136
+  },
+  {
+   "block": "terra-off|C1460|de-eng",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 24906,
+   "prompt_sha256": "83cb510f5cf418b0483144e34176909c3b8bad895e5310903c920980ff5c00e7",
+   "order": 137
+  },
+  {
+   "block": "terra|C1423|de-eng",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 33168,
+   "prompt_sha256": "5b1babb1ea4168d676fb3ed279b8a8159d9ba22534af919b2a97006a4bd9e9b0",
+   "order": 138
+  },
+  {
+   "block": "gemini|C1026|en",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 12527,
+   "prompt_sha256": "c341a92cf7f1020c21034229479f95a8f469f8b0d960948c1cbd2b3a68790a48",
+   "order": 139
+  },
+  {
+   "block": "terra-off|C1387|gr",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 19152,
+   "prompt_sha256": "de7e949ef53da4833c061abc89bf2a69882c0da5870463fdfa5379cd2bc0b9b7",
+   "order": 140
+  },
+  {
+   "block": "terra|C1423|bt-en",
+   "config": "terra",
+   "case": "C1423",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 30498,
+   "prompt_sha256": "af4fbfa76efd19bd737ec1634f2d37ce4c7e06f8fc51f0247f645f44a04b4f98",
+   "order": 141
+  },
+  {
+   "block": "terra|C1026|de-eng",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 14855,
+   "prompt_sha256": "038f1b9824866b6cbcfcb065747608255c298fd1083919c11e44465d6c49592e",
+   "order": 142
+  },
+  {
+   "block": "sonnet|C1460|en",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 21849,
+   "prompt_sha256": "1f2b7889433c41d918d3278c099263fd6efe94ee2d97c2bbd5b0ee0b17ceb003",
+   "order": 143
+  },
+  {
+   "block": "terra-off|C0990|gr",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22886,
+   "prompt_sha256": "78dcc72a89b2b844fb28f2bc92e02ce1d82f056f0c7903938595b0167007363b",
+   "order": 144
+  },
+  {
+   "block": "terra|C0990|bt-de",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 23259,
+   "prompt_sha256": "2c70529cc7ffd1800835de5894e39794649e29a257214178bdd8dc4fc52544f3",
+   "order": 145
+  },
+  {
+   "block": "terra-off|C1099|bt-de",
+   "config": "terra-off",
+   "case": "C1099",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13948,
+   "prompt_sha256": "53f00c4d2d5433a2af1d9735e0f9a4d3493b44c80fab2b1078d7edfa3a3d37cd",
+   "order": 146
+  },
+  {
+   "block": "sonnet|C1026|bt-de",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13054,
+   "prompt_sha256": "e00c107b8ddca99c4e4b15ba1401a778162dbd1c1707a5598818702dffd58398",
+   "order": 147
+  },
+  {
+   "block": "terra|C1292|bt-en",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14681,
+   "prompt_sha256": "bca769b586eee9353c8c924311b66b7679b3c5a45003d851f1de0989015e8bfa",
+   "order": 148
+  },
+  {
+   "block": "sonnet|C1460|de-eng",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 24906,
+   "prompt_sha256": "83cb510f5cf418b0483144e34176909c3b8bad895e5310903c920980ff5c00e7",
+   "order": 149
+  },
+  {
+   "block": "gemini|C1316|bt-en",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14270,
+   "prompt_sha256": "0d423fad9ddf50d126579a50d504dc0d885f6bc7dde333bffeae5953bfc0770b",
+   "order": 150
+  },
+  {
+   "block": "sonnet|C1099|de-eng",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15845,
+   "prompt_sha256": "89d7317c63f2f27f87ff1f790a7f67091f579d39d0bcddfd3f168cfd8b30b822",
+   "order": 151
+  },
+  {
+   "block": "terra-off|C1621|bt-de",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 33212,
+   "prompt_sha256": "12a499eb3193e46184dc5419f973bf77e8e312e95b35ccbe3ec44cc47adeeabc",
+   "order": 152
+  },
+  {
+   "block": "terra-off|C1195|en",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18543,
+   "prompt_sha256": "c8dfff23ca8f5eee5bf459d2cbb993aedd7916ff097e67fc40171af2ae8c2eed",
+   "order": 153
+  },
+  {
+   "block": "terra|C1099|en",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13582,
+   "prompt_sha256": "9ae7733d50e9bcfca2a9004f37bbfa328628ffa47ac205ad6ac4076fd67bae9c",
+   "order": 154
+  },
+  {
+   "block": "gemini|C1387|bt-en",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19404,
+   "prompt_sha256": "d05a934fe4b0c9c25adb782705697d3a32450c7f0c18ed4d8271097d747cd394",
+   "order": 155
+  },
+  {
+   "block": "terra-off|C1460|bt-en",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 22456,
+   "prompt_sha256": "f303a825431d3d64c74d30239694f542e42ab69e116e219b4792c736d6879beb",
+   "order": 156
+  },
+  {
+   "block": "terra-off|C1423|de-lit",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 33262,
+   "prompt_sha256": "a489ccf67328a493bf78709becb15e79da5f239de0649664227b7a31380fd780",
+   "order": 157
+  },
+  {
+   "block": "terra-off|C1292|bt-de",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14617,
+   "prompt_sha256": "8e28889650ae40da91f1198e281023005f780c5191765786be5f155118970ba6",
+   "order": 158
+  },
+  {
+   "block": "terra|C1621|gr",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 32635,
+   "prompt_sha256": "9d3b694fd511b67bd09fad2e023728b6dfe5e8f171a418c4b854a8770a91b5cc",
+   "order": 159
+  },
+  {
+   "block": "sonnet|C0990|bt-de",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 23259,
+   "prompt_sha256": "2c70529cc7ffd1800835de5894e39794649e29a257214178bdd8dc4fc52544f3",
+   "order": 160
+  },
+  {
+   "block": "terra|C1026|gr",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 12855,
+   "prompt_sha256": "e3e987978a8e0c1e3bed09bc0803bfbe8584ced395d5fd6a9124043a02c69693",
+   "order": 161
+  },
+  {
+   "block": "gemini|C1423|gr",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 29919,
+   "prompt_sha256": "93d0d5f9fc00ea66770f51ee867ae89f05e3aa0a45e6247c637a95d8f663bf3c",
+   "order": 162
+  },
+  {
+   "block": "gemini|C0990|de-eng",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 25394,
+   "prompt_sha256": "efff357e79878edff4998ab8d67826f8d9c49925504fcd6a9157f8d358f943f1",
+   "order": 163
+  },
+  {
+   "block": "gemini|C1099|gr",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13831,
+   "prompt_sha256": "0f0e9a5823eed5973b01e76ae0cda69c95cad13f4957c1026b2de5bfc90cfa9f",
+   "order": 164
+  },
+  {
+   "block": "terra-off|C1423|gr",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 29919,
+   "prompt_sha256": "93d0d5f9fc00ea66770f51ee867ae89f05e3aa0a45e6247c637a95d8f663bf3c",
+   "order": 165
+  },
+  {
+   "block": "gemini|C1460|de-lit",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 24987,
+   "prompt_sha256": "f5b8710fc136c97f76052693461051cb2c4bf7cf9900c891e5d464937222e8bf",
+   "order": 166
+  },
+  {
+   "block": "sonnet|C1316|bt-de",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14080,
+   "prompt_sha256": "15a862a85f7aee5284ee816074a54dc5ceb772c19e798efe3e2dc23a9d35e10e",
+   "order": 167
+  },
+  {
+   "block": "terra-off|C1292|en",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 14003,
+   "prompt_sha256": "d9b22055bedb0fd9a03477c510826791d37649acd9cd1b6306c19996f703e81f",
+   "order": 168
+  },
+  {
+   "block": "terra-off|C1195|de-eng",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 20861,
+   "prompt_sha256": "cd276c5321f3e488d8aaebd5f885a764238d18c5a276ba7b28b8d9617ce82d11",
+   "order": 169
+  },
+  {
+   "block": "sonnet|C1387|en",
+   "config": "sonnet",
+   "case": "C1387",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18851,
+   "prompt_sha256": "83c20a6f17071c93ecc19606cd04624584347bb68ac00de5e77d4a228264649a",
+   "order": 170
+  },
+  {
+   "block": "gemini|C1026|de-eng",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 14855,
+   "prompt_sha256": "038f1b9824866b6cbcfcb065747608255c298fd1083919c11e44465d6c49592e",
+   "order": 171
+  },
+  {
+   "block": "terra|C1099|bt-en",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13891,
+   "prompt_sha256": "459f1095d45f50bd11beb7086f4c89f06d1bfb8aa9fa92ac9a7398ae3676aca7",
+   "order": 172
+  },
+  {
+   "block": "terra-off|C1460|en",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 21849,
+   "prompt_sha256": "1f2b7889433c41d918d3278c099263fd6efe94ee2d97c2bbd5b0ee0b17ceb003",
+   "order": 173
+  },
+  {
+   "block": "terra-off|C1026|bt-de",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13054,
+   "prompt_sha256": "e00c107b8ddca99c4e4b15ba1401a778162dbd1c1707a5598818702dffd58398",
+   "order": 174
+  },
+  {
+   "block": "sonnet|C1316|gr",
+   "config": "sonnet",
+   "case": "C1316",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13929,
+   "prompt_sha256": "211589d26c940a002552e658a667352bcd68b836db6d3de67a4221e261996de8",
+   "order": 175
+  },
+  {
+   "block": "sonnet|C0990|de-eng",
+   "config": "sonnet",
+   "case": "C0990",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 25394,
+   "prompt_sha256": "efff357e79878edff4998ab8d67826f8d9c49925504fcd6a9157f8d358f943f1",
+   "order": 176
+  },
+  {
+   "block": "sonnet|C1292|en",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 14003,
+   "prompt_sha256": "d9b22055bedb0fd9a03477c510826791d37649acd9cd1b6306c19996f703e81f",
+   "order": 177
+  },
+  {
+   "block": "gemini|C1195|bt-en",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19151,
+   "prompt_sha256": "09a33dac0170bdbfe9c714da7a5fe0e0ff25f9562c79a25d60ff1cb5d040ed56",
+   "order": 178
+  },
+  {
+   "block": "gemini|C1026|bt-de",
+   "config": "gemini",
+   "case": "C1026",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13054,
+   "prompt_sha256": "e00c107b8ddca99c4e4b15ba1401a778162dbd1c1707a5598818702dffd58398",
+   "order": 179
+  },
+  {
+   "block": "gemini|C1460|bt-de",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 22577,
+   "prompt_sha256": "9624e16e16f99387e9fed09300aa59eb18d8bf9ca303a23c51b1d9fd4be1b288",
+   "order": 180
+  },
+  {
+   "block": "terra-off|C1621|bt-en",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 33174,
+   "prompt_sha256": "716a784c975edc708aa46187f77b5458ae4c890d2ca4eaba5b0160c25225b683",
+   "order": 181
+  },
+  {
+   "block": "gemini|C1387|de-eng",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 21093,
+   "prompt_sha256": "ccfa36149286a5462a69c641f966a359a666de893c7ea803f9e1f136b739a780",
+   "order": 182
+  },
+  {
+   "block": "terra|C1387|en",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18851,
+   "prompt_sha256": "83c20a6f17071c93ecc19606cd04624584347bb68ac00de5e77d4a228264649a",
+   "order": 183
+  },
+  {
+   "block": "sonnet|C1423|en",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 28863,
+   "prompt_sha256": "6c807a36244f75e8ef0ec97d25e3a8b891e3eeb5eb645e18cb8942ba383a8794",
+   "order": 184
+  },
+  {
+   "block": "gemini|C1460|de-eng",
+   "config": "gemini",
+   "case": "C1460",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 24906,
+   "prompt_sha256": "83cb510f5cf418b0483144e34176909c3b8bad895e5310903c920980ff5c00e7",
+   "order": 185
+  },
+  {
+   "block": "sonnet|C1621|en",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 32890,
+   "prompt_sha256": "2c385945de78be8b6097e51473d587c7dbb070c6411a73bdbb5042c29158d481",
+   "order": 186
+  },
+  {
+   "block": "gemini|C1195|de-eng",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 20861,
+   "prompt_sha256": "cd276c5321f3e488d8aaebd5f885a764238d18c5a276ba7b28b8d9617ce82d11",
+   "order": 187
+  },
+  {
+   "block": "terra-off|C1026|bt-en",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 13065,
+   "prompt_sha256": "7606fc9587ece2f1143c9ad1ffe24555048888e0a20f5e68c173559a43b49c4c",
+   "order": 188
+  },
+  {
+   "block": "terra|C1460|en",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 21849,
+   "prompt_sha256": "1f2b7889433c41d918d3278c099263fd6efe94ee2d97c2bbd5b0ee0b17ceb003",
+   "order": 189
+  },
+  {
+   "block": "gemini|C1195|gr",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 18651,
+   "prompt_sha256": "42112d3962d6334c534ead859a68ea11fd16089cceedc2dfeaf258a2e20664f7",
+   "order": 190
+  },
+  {
+   "block": "terra-off|C1316|de-lit",
+   "config": "terra-off",
+   "case": "C1316",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 15477,
+   "prompt_sha256": "c298b267131c368a94528c456f85c432c4c44b08c99a04907070207bd945fd1f",
+   "order": 191
+  },
+  {
+   "block": "sonnet|C1195|de-lit",
+   "config": "sonnet",
+   "case": "C1195",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 20954,
+   "prompt_sha256": "c0e50ab122cf3a2ca7e7ffc325663614fe9cc6de3723a4200579514da28f9f1f",
+   "order": 192
+  },
+  {
+   "block": "sonnet|C1099|bt-de",
+   "config": "sonnet",
+   "case": "C1099",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13948,
+   "prompt_sha256": "53f00c4d2d5433a2af1d9735e0f9a4d3493b44c80fab2b1078d7edfa3a3d37cd",
+   "order": 193
+  },
+  {
+   "block": "gemini|C1423|de-lit",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 33262,
+   "prompt_sha256": "a489ccf67328a493bf78709becb15e79da5f239de0649664227b7a31380fd780",
+   "order": 194
+  },
+  {
+   "block": "gemini|C1316|en",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 13553,
+   "prompt_sha256": "f9b09dfdbb712922ced298c94c47670d9af782283551cbdb846b3c075ed96f53",
+   "order": 195
+  },
+  {
+   "block": "terra-off|C1423|en",
+   "config": "terra-off",
+   "case": "C1423",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 28863,
+   "prompt_sha256": "6c807a36244f75e8ef0ec97d25e3a8b891e3eeb5eb645e18cb8942ba383a8794",
+   "order": 196
+  },
+  {
+   "block": "terra|C1316|bt-de",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14080,
+   "prompt_sha256": "15a862a85f7aee5284ee816074a54dc5ceb772c19e798efe3e2dc23a9d35e10e",
+   "order": 197
+  },
+  {
+   "block": "sonnet|C1460|bt-en",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 22456,
+   "prompt_sha256": "f303a825431d3d64c74d30239694f542e42ab69e116e219b4792c736d6879beb",
+   "order": 198
+  },
+  {
+   "block": "terra|C1026|de-lit",
+   "config": "terra",
+   "case": "C1026",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 14943,
+   "prompt_sha256": "ab96d937ba241b31b3d8a739d31e83471e29bbf278c02e59c0c3d6d28288845f",
+   "order": 199
+  },
+  {
+   "block": "sonnet|C1621|bt-de",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 33212,
+   "prompt_sha256": "12a499eb3193e46184dc5419f973bf77e8e312e95b35ccbe3ec44cc47adeeabc",
+   "order": 200
+  },
+  {
+   "block": "sonnet|C1423|bt-en",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 30498,
+   "prompt_sha256": "af4fbfa76efd19bd737ec1634f2d37ce4c7e06f8fc51f0247f645f44a04b4f98",
+   "order": 201
+  },
+  {
+   "block": "gemini|C1292|bt-en",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14681,
+   "prompt_sha256": "bca769b586eee9353c8c924311b66b7679b3c5a45003d851f1de0989015e8bfa",
+   "order": 202
+  },
+  {
+   "block": "terra-off|C1460|de-lit",
+   "config": "terra-off",
+   "case": "C1460",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 24987,
+   "prompt_sha256": "f5b8710fc136c97f76052693461051cb2c4bf7cf9900c891e5d464937222e8bf",
+   "order": 203
+  },
+  {
+   "block": "gemini|C1387|bt-de",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 19409,
+   "prompt_sha256": "10c5c6905148b4a2d6f4d8dfa02bd567d3958bb502edd3e5a3b4f4cd13d2e10f",
+   "order": 204
+  },
+  {
+   "block": "terra|C1316|bt-en",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 14270,
+   "prompt_sha256": "0d423fad9ddf50d126579a50d504dc0d885f6bc7dde333bffeae5953bfc0770b",
+   "order": 205
+  },
+  {
+   "block": "terra|C1387|bt-en",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 19404,
+   "prompt_sha256": "d05a934fe4b0c9c25adb782705697d3a32450c7f0c18ed4d8271097d747cd394",
+   "order": 206
+  },
+  {
+   "block": "terra-off|C1621|de-eng",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 37306,
+   "prompt_sha256": "d13749107ca8854040fc2124cc35419713305f17a97e4d4b6f00351512dc4ba1",
+   "order": 207
+  },
+  {
+   "block": "gemini|C1387|en",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18851,
+   "prompt_sha256": "83c20a6f17071c93ecc19606cd04624584347bb68ac00de5e77d4a228264649a",
+   "order": 208
+  },
+  {
+   "block": "gemini|C1423|bt-en",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "bt-en",
+   "k": 31,
+   "prompt_chars": 30498,
+   "prompt_sha256": "af4fbfa76efd19bd737ec1634f2d37ce4c7e06f8fc51f0247f645f44a04b4f98",
+   "order": 209
+  },
+  {
+   "block": "terra|C1099|de-eng",
+   "config": "terra",
+   "case": "C1099",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15845,
+   "prompt_sha256": "89d7317c63f2f27f87ff1f790a7f67091f579d39d0bcddfd3f168cfd8b30b822",
+   "order": 210
+  },
+  {
+   "block": "terra|C0990|de-lit",
+   "config": "terra",
+   "case": "C0990",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 25474,
+   "prompt_sha256": "b22a52088dbdb39cc3f3c42828c656a83873c310c3e827ae19b5a607c0245a34",
+   "order": 211
+  },
+  {
+   "block": "sonnet|C1026|gr",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 12855,
+   "prompt_sha256": "e3e987978a8e0c1e3bed09bc0803bfbe8584ced395d5fd6a9124043a02c69693",
+   "order": 212
+  },
+  {
+   "block": "terra|C1316|gr",
+   "config": "terra",
+   "case": "C1316",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13929,
+   "prompt_sha256": "211589d26c940a002552e658a667352bcd68b836db6d3de67a4221e261996de8",
+   "order": 213
+  },
+  {
+   "block": "sonnet|C1292|gr",
+   "config": "sonnet",
+   "case": "C1292",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 14546,
+   "prompt_sha256": "ef7f5da7efde0a197fcae067575f8e879ef19e41ba724f4e9f009190bd56f9e7",
+   "order": 214
+  },
+  {
+   "block": "terra-off|C1621|gr",
+   "config": "terra-off",
+   "case": "C1621",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 32635,
+   "prompt_sha256": "9d3b694fd511b67bd09fad2e023728b6dfe5e8f171a418c4b854a8770a91b5cc",
+   "order": 215
+  },
+  {
+   "block": "terra|C1195|de-lit",
+   "config": "terra",
+   "case": "C1195",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 20954,
+   "prompt_sha256": "c0e50ab122cf3a2ca7e7ffc325663614fe9cc6de3723a4200579514da28f9f1f",
+   "order": 216
+  },
+  {
+   "block": "terra|C1387|gr",
+   "config": "terra",
+   "case": "C1387",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 19152,
+   "prompt_sha256": "de7e949ef53da4833c061abc89bf2a69882c0da5870463fdfa5379cd2bc0b9b7",
+   "order": 217
+  },
+  {
+   "block": "gemini|C1195|en",
+   "config": "gemini",
+   "case": "C1195",
+   "arm": "en",
+   "k": 31,
+   "prompt_chars": 18543,
+   "prompt_sha256": "c8dfff23ca8f5eee5bf459d2cbb993aedd7916ff097e67fc40171af2ae8c2eed",
+   "order": 218
+  },
+  {
+   "block": "gemini|C1316|gr",
+   "config": "gemini",
+   "case": "C1316",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 13929,
+   "prompt_sha256": "211589d26c940a002552e658a667352bcd68b836db6d3de67a4221e261996de8",
+   "order": 219
+  },
+  {
+   "block": "sonnet|C1621|de-eng",
+   "config": "sonnet",
+   "case": "C1621",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 37306,
+   "prompt_sha256": "d13749107ca8854040fc2124cc35419713305f17a97e4d4b6f00351512dc4ba1",
+   "order": 220
+  },
+  {
+   "block": "gemini|C1292|bt-de",
+   "config": "gemini",
+   "case": "C1292",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 14617,
+   "prompt_sha256": "8e28889650ae40da91f1198e281023005f780c5191765786be5f155118970ba6",
+   "order": 221
+  },
+  {
+   "block": "terra-off|C1195|de-lit",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 20954,
+   "prompt_sha256": "c0e50ab122cf3a2ca7e7ffc325663614fe9cc6de3723a4200579514da28f9f1f",
+   "order": 222
+  },
+  {
+   "block": "terra-off|C1387|de-lit",
+   "config": "terra-off",
+   "case": "C1387",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 21186,
+   "prompt_sha256": "bb65ffa97b7158c530c65610b88e7114c1ea578a258898e9f1a92ea3ebb6c32d",
+   "order": 223
+  },
+  {
+   "block": "terra-off|C1195|gr",
+   "config": "terra-off",
+   "case": "C1195",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 18651,
+   "prompt_sha256": "42112d3962d6334c534ead859a68ea11fd16089cceedc2dfeaf258a2e20664f7",
+   "order": 224
+  },
+  {
+   "block": "sonnet|C1026|de-lit",
+   "config": "sonnet",
+   "case": "C1026",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 14943,
+   "prompt_sha256": "ab96d937ba241b31b3d8a739d31e83471e29bbf278c02e59c0c3d6d28288845f",
+   "order": 225
+  },
+  {
+   "block": "gemini|C1099|de-eng",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15845,
+   "prompt_sha256": "89d7317c63f2f27f87ff1f790a7f67091f579d39d0bcddfd3f168cfd8b30b822",
+   "order": 226
+  },
+  {
+   "block": "terra-off|C0990|de-eng",
+   "config": "terra-off",
+   "case": "C0990",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 25394,
+   "prompt_sha256": "efff357e79878edff4998ab8d67826f8d9c49925504fcd6a9157f8d358f943f1",
+   "order": 227
+  },
+  {
+   "block": "gemini|C1423|bt-de",
+   "config": "gemini",
+   "case": "C1423",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 30550,
+   "prompt_sha256": "ae0a521d81544f818390052b6d6c13c3275466081281a7cbd0beceda66a77b9f",
+   "order": 228
+  },
+  {
+   "block": "sonnet|C1423|bt-de",
+   "config": "sonnet",
+   "case": "C1423",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 30550,
+   "prompt_sha256": "ae0a521d81544f818390052b6d6c13c3275466081281a7cbd0beceda66a77b9f",
+   "order": 229
+  },
+  {
+   "block": "terra|C1621|de-eng",
+   "config": "terra",
+   "case": "C1621",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 37306,
+   "prompt_sha256": "d13749107ca8854040fc2124cc35419713305f17a97e4d4b6f00351512dc4ba1",
+   "order": 230
+  },
+  {
+   "block": "gemini|C0990|de-lit",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 25474,
+   "prompt_sha256": "b22a52088dbdb39cc3f3c42828c656a83873c310c3e827ae19b5a607c0245a34",
+   "order": 231
+  },
+  {
+   "block": "gemini|C1387|gr",
+   "config": "gemini",
+   "case": "C1387",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 19152,
+   "prompt_sha256": "de7e949ef53da4833c061abc89bf2a69882c0da5870463fdfa5379cd2bc0b9b7",
+   "order": 232
+  },
+  {
+   "block": "terra-off|C1026|de-lit",
+   "config": "terra-off",
+   "case": "C1026",
+   "arm": "de-lit",
+   "k": 31,
+   "prompt_chars": 14943,
+   "prompt_sha256": "ab96d937ba241b31b3d8a739d31e83471e29bbf278c02e59c0c3d6d28288845f",
+   "order": 233
+  },
+  {
+   "block": "terra|C1460|de-eng",
+   "config": "terra",
+   "case": "C1460",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 24906,
+   "prompt_sha256": "83cb510f5cf418b0483144e34176909c3b8bad895e5310903c920980ff5c00e7",
+   "order": 234
+  },
+  {
+   "block": "terra-off|C1292|de-eng",
+   "config": "terra-off",
+   "case": "C1292",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15754,
+   "prompt_sha256": "f8af1d8a135b20aec22297f08aec30a3572e0bc2f5a320b52afb4d97092ef9a3",
+   "order": 235
+  },
+  {
+   "block": "sonnet|C1460|bt-de",
+   "config": "sonnet",
+   "case": "C1460",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 22577,
+   "prompt_sha256": "9624e16e16f99387e9fed09300aa59eb18d8bf9ca303a23c51b1d9fd4be1b288",
+   "order": 236
+  },
+  {
+   "block": "gemini|C0990|gr",
+   "config": "gemini",
+   "case": "C0990",
+   "arm": "gr",
+   "k": 62,
+   "prompt_chars": 22886,
+   "prompt_sha256": "78dcc72a89b2b844fb28f2bc92e02ce1d82f056f0c7903938595b0167007363b",
+   "order": 237
+  },
+  {
+   "block": "gemini|C1099|bt-de",
+   "config": "gemini",
+   "case": "C1099",
+   "arm": "bt-de",
+   "k": 31,
+   "prompt_chars": 13948,
+   "prompt_sha256": "53f00c4d2d5433a2af1d9735e0f9a4d3493b44c80fab2b1078d7edfa3a3d37cd",
+   "order": 238
+  },
+  {
+   "block": "terra|C1292|de-eng",
+   "config": "terra",
+   "case": "C1292",
+   "arm": "de-eng",
+   "k": 31,
+   "prompt_chars": 15754,
+   "prompt_sha256": "f8af1d8a135b20aec22297f08aec30a3572e0bc2f5a320b52afb4d97092ef9a3",
+   "order": 239
+  }
+ ]
+}

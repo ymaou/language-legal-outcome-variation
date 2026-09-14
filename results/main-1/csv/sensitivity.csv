@@ -1,0 +1,5 @@
+﻿configuration,model,reasoning,cases,accuracy (four options),majority-class baseline,MCC,accuracy (relief / none),baseline (relief / none),MCC (relief / none)
+terra,gpt-5.6-terra,medium,10,0.4,0.4,0.0,0.4,0.6,0.0
+terra-off,gpt-5.6-terra,none,10,0.4,0.4,0.0,0.4,0.6,0.0
+sonnet,claude-sonnet-5,medium,10,0.4,0.4,0.0,0.4,0.6,0.0
+gemini,gemini-3.6-flash,medium,10,0.5,0.4,0.2946278255,0.5,0.6,0.272165527

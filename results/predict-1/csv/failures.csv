@@ -1,0 +1,9 @@
+﻿configuration,model,arm,calls with a reply,valid,failure rate,failures by kind
+terra,gpt-5.6-terra,gr,300,300,0.0,none
+terra,gpt-5.6-terra,en,150,150,0.0,none
+terra-off,gpt-5.6-terra,gr,300,300,0.0,none
+terra-off,gpt-5.6-terra,en,150,150,0.0,none
+sonnet,claude-sonnet-5,gr,300,300,0.0,none
+sonnet,claude-sonnet-5,en,150,150,0.0,none
+gemini,gemini-3.6-flash,gr,300,300,0.0,none
+gemini,gemini-3.6-flash,en,150,150,0.0,none

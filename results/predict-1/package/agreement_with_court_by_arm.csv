@@ -1,0 +1,9 @@
+﻿model,arm,accuracy (four options),MCC,accuracy (relief or none),MCC (relief or none),majority-class baseline
+GPT-5.6 Terra,Greek,0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,English,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",Greek,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",English,0.40,0.00,0.40,0.00,0.40
+Claude Sonnet 5,Greek,0.50,0.31,0.70,0.53,0.40
+Claude Sonnet 5,English,0.40,0.00,0.40,0.00,0.40
+Gemini 3.6 Flash,Greek,0.50,0.29,0.50,0.27,0.40
+Gemini 3.6 Flash,English,0.50,0.29,0.50,0.27,0.40

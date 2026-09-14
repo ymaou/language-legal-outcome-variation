@@ -217,8 +217,16 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Model outputs stay out of git until the outputs freeze (freeze-log.md, freeze 3)
-raw/
+# Model outputs: the real runs are released; dry-run and end-to-end test folders are not
+raw/*
+!raw/main-1/
+!raw/predict-1/
+!raw/pilot-1/
+!raw/COSTS.md
+!raw/costs.csv
 
-# Analysis outputs stay out of git until the results are released
-results/
+# Analysis outputs: the real runs are released; test folders are not
+results/*
+!results/README.md
+!results/main-1/
+!results/predict-1/

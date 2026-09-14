@@ -1,0 +1,9 @@
+﻿model,arm,calls,mean input tokens,mean cached share,mean output tokens,mean reasoning tokens (Sonnet: not separated),mean seconds,cost (USD)
+GPT-5.6 Terra,Greek,300,7502,0.97,368,108,8.0,1.911
+GPT-5.6 Terra,English,150,4256,0.93,251,118,4.3,0.657
+"GPT-5.6 Terra, reasoning off",Greek,300,7502,0.97,263,0,6.4,1.534
+"GPT-5.6 Terra, reasoning off",English,150,4256,0.93,137,0,2.8,0.451
+Claude Sonnet 5,Greek,300,13349,0.97,570,n/a,13.1,2.818
+Claude Sonnet 5,English,150,6345,0.93,313,n/a,4.4,0.806
+Gemini 3.6 Flash,Greek,300,7869,0.13,1700,1427,9.2,3.364
+Gemini 3.6 Flash,English,150,4411,0.00,983,836,6.1,1.049

@@ -1,0 +1,25 @@
+﻿model,arm,prompt language,replies,valid,failures,reply language,field names,fields in asked order
+GPT-5.6 Terra,Greek,el,620,620,none,el 620,as_asked 620,620
+GPT-5.6 Terra,BT via English,el,310,310,none,el 310,as_asked 310,310
+GPT-5.6 Terra,English,en,310,310,none,en 310,as_asked 310,310
+GPT-5.6 Terra,BT via German,el,310,310,none,el 310,as_asked 310,310
+GPT-5.6 Terra,German (plain terms),de-lit,310,310,none,de 310,as_asked 310,310
+GPT-5.6 Terra,German (English terms),de-eng,310,310,none,de 310,as_asked 310,310
+"GPT-5.6 Terra, reasoning off",Greek,el,620,620,none,el 620,as_asked 620,620
+"GPT-5.6 Terra, reasoning off",BT via English,el,310,310,none,el 310,as_asked 310,310
+"GPT-5.6 Terra, reasoning off",English,en,310,310,none,en 310,as_asked 310,310
+"GPT-5.6 Terra, reasoning off",BT via German,el,310,310,none,el 310,as_asked 310,310
+"GPT-5.6 Terra, reasoning off",German (plain terms),de-lit,310,310,none,de 310,as_asked 310,310
+"GPT-5.6 Terra, reasoning off",German (English terms),de-eng,310,310,none,de 310,as_asked 310,310
+Claude Sonnet 5,Greek,el,620,620,none,el 620,as_asked 620,620
+Claude Sonnet 5,BT via English,el,310,310,none,el 310,as_asked 310,310
+Claude Sonnet 5,English,en,310,310,none,en 310,as_asked 310,310
+Claude Sonnet 5,BT via German,el,310,310,none,el 310,as_asked 310,310
+Claude Sonnet 5,German (plain terms),de-lit,310,310,none,de 310,as_asked 310,310
+Claude Sonnet 5,German (English terms),de-eng,310,310,none,de 310,as_asked 310,310
+Gemini 3.6 Flash,Greek,el,620,620,none,el 620,as_asked 620,620
+Gemini 3.6 Flash,BT via English,el,310,310,none,el 310,as_asked 310,310
+Gemini 3.6 Flash,English,en,310,310,none,en 310,as_asked 310,310
+Gemini 3.6 Flash,BT via German,el,310,310,none,el 310,as_asked 310,310
+Gemini 3.6 Flash,German (plain terms),de-lit,310,310,none,de 310,as_asked 310,310
+Gemini 3.6 Flash,German (English terms),de-eng,310,310,none,de 310,as_asked 310,310

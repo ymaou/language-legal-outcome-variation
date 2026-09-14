@@ -1,0 +1,33 @@
+﻿configuration,consideration,share of all replies,share of dismissals,share of grants,n grants
+terra,disputed facts / conflicting evidence,0.736,0.738,0.438,16
+terra,credibility / cross-examination,0.112,0.113,0.0,16
+terra,trial or full hearing needed,0.345,0.344,0.375,16
+terra,fanciful / realistic distinction,0.188,0.189,0.125,16
+terra,documents / expert evidence needed,0.073,0.074,0.0,16
+terra,real prospect (the limb (a) phrase),0.758,0.757,0.875,16
+terra,compelling reason (the limb (b) phrase),0.175,0.174,0.312,16
+terra,mini-trial,0.0,0.0,0.0,16
+terra-off,disputed facts / conflicting evidence,0.729,0.733,0.488,43
+terra-off,credibility / cross-examination,0.112,0.114,0.0,43
+terra-off,trial or full hearing needed,0.461,0.454,0.814,43
+terra-off,fanciful / realistic distinction,0.181,0.176,0.442,43
+terra-off,documents / expert evidence needed,0.087,0.084,0.233,43
+terra-off,real prospect (the limb (a) phrase),0.751,0.748,0.884,43
+terra-off,compelling reason (the limb (b) phrase),0.272,0.268,0.465,43
+terra-off,mini-trial,0.0,0.0,0.0,43
+sonnet,disputed facts / conflicting evidence,0.818,0.818,0.825,200
+sonnet,credibility / cross-examination,0.63,0.631,0.63,200
+sonnet,trial or full hearing needed,0.767,0.785,0.59,200
+sonnet,fanciful / realistic distinction,0.156,0.164,0.075,200
+sonnet,documents / expert evidence needed,0.113,0.124,0.005,200
+sonnet,real prospect (the limb (a) phrase),0.702,0.69,0.82,200
+sonnet,compelling reason (the limb (b) phrase),0.216,0.233,0.05,200
+sonnet,mini-trial,0.0,0.0,0.0,200
+gemini,disputed facts / conflicting evidence,0.708,0.748,0.13,138
+gemini,credibility / cross-examination,0.034,0.036,0.007,138
+gemini,trial or full hearing needed,0.571,0.55,0.884,138
+gemini,fanciful / realistic distinction,0.155,0.154,0.174,138
+gemini,documents / expert evidence needed,0.04,0.042,0.0,138
+gemini,real prospect (the limb (a) phrase),0.994,0.994,0.993,138
+gemini,compelling reason (the limb (b) phrase),0.057,0.003,0.848,138
+gemini,mini-trial,0.0,0.0,0.0,138

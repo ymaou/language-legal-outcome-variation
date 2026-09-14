@@ -1,0 +1,5 @@
+﻿configuration,model,reasoning,comparisons holding: Greek half vs EN,of which ground differs,share (EN),comparisons holding: Greek half vs BT-en,of which ground differs,share (BT-en),difference (EN minus BT-en)
+terra,gpt-5.6-terra,medium,4000,399,0.09975,4000,1,0.00025,0.0995
+terra-off,gpt-5.6-terra,none,4000,1585,0.39625,4000,794,0.1985,0.19775
+sonnet,claude-sonnet-5,medium,4000,1428,0.357,3200,360,0.1125,0.2445
+gemini,gemini-3.6-flash,medium,3998,0,0.0,3998,0,0.0,0.0

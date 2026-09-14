@@ -1,0 +1,25 @@
+﻿model,arm,accuracy (four options),MCC,accuracy (relief or none),MCC (relief or none),majority-class baseline
+GPT-5.6 Terra,Greek,0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,BT via English,0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,English,0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,BT via German,0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,German (plain terms),0.40,0.00,0.40,0.00,0.40
+GPT-5.6 Terra,German (English terms),0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",Greek,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",BT via English,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",English,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",BT via German,0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",German (plain terms),0.40,0.00,0.40,0.00,0.40
+"GPT-5.6 Terra, reasoning off",German (English terms),0.40,0.00,0.40,0.00,0.40
+Claude Sonnet 5,Greek,0.40,0.00,0.40,0.00,0.40
+Claude Sonnet 5,BT via English,0.40,0.09,0.60,0.41,0.40
+Claude Sonnet 5,English,0.40,0.00,0.40,0.00,0.40
+Claude Sonnet 5,BT via German,0.40,0.06,0.50,0.27,0.40
+Claude Sonnet 5,German (plain terms),0.40,0.00,0.40,0.00,0.40
+Claude Sonnet 5,German (English terms),0.40,0.00,0.40,0.00,0.40
+Gemini 3.6 Flash,Greek,0.50,0.29,0.50,0.27,0.40
+Gemini 3.6 Flash,BT via English,0.50,0.29,0.50,0.27,0.40
+Gemini 3.6 Flash,English,0.50,0.29,0.50,0.27,0.40
+Gemini 3.6 Flash,BT via German,0.40,0.00,0.40,0.00,0.40
+Gemini 3.6 Flash,German (plain terms),0.40,0.00,0.40,0.00,0.40
+Gemini 3.6 Flash,German (English terms),0.50,0.29,0.50,0.27,0.40

@@ -1,0 +1,20 @@
+﻿item,value
+run,main-1
+prompt set,decide
+mode,main
+arms,"gr, bt-en, en, bt-de, de-lit, de-eng"
+cases,"C0990, C1026, C1099, C1195, C1292, C1316, C1387, C1423, C1460, C1621"
+draws per arm (Greek),31 (62)
+replies,8680
+valid replies,8680
+first call (UTC),2026-09-13T19:22:59.635+00:00
+last call (UTC),2026-09-13T20:20:55.422+00:00
+order seed,131036515
+protocol commit,e5bf50fb777696ef586a452dd06fa58e1ffd5a1d
+max output tokens,32000
+not sent,"temperature, top_p, seed"
+"cost, computed at list prices (USD)",62.06
+configuration terra,"openai gpt-5.6-terra, reasoning medium; identifier returned: gpt-5.6-terra"
+configuration terra-off,"openai gpt-5.6-terra, reasoning none; identifier returned: gpt-5.6-terra"
+configuration sonnet,"anthropic claude-sonnet-5, reasoning medium; identifier returned: claude-sonnet-5"
+configuration gemini,"google gemini-3.6-flash, reasoning medium; identifier returned: gemini-3.6-flash"

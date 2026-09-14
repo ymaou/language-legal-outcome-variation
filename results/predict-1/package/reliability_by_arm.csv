@@ -1,0 +1,9 @@
+﻿model,arm,prompt language,replies,valid,failures,reply language,field names,fields in asked order
+GPT-5.6 Terra,Greek,el,300,300,none,el 300,as_asked 300,300
+GPT-5.6 Terra,English,en,150,150,none,en 150,as_asked 150,150
+"GPT-5.6 Terra, reasoning off",Greek,el,300,300,none,el 300,as_asked 300,300
+"GPT-5.6 Terra, reasoning off",English,en,150,150,none,en 150,as_asked 150,150
+Claude Sonnet 5,Greek,el,300,300,none,el 300,as_asked 300,300
+Claude Sonnet 5,English,en,150,150,none,en 150,as_asked 150,150
+Gemini 3.6 Flash,Greek,el,300,300,none,el 300,as_asked 300,300
+Gemini 3.6 Flash,English,en,150,150,none,en 150,as_asked 150,150

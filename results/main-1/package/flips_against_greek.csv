@@ -1,0 +1,6 @@
+﻿model,case,arm,Greek modal,Greek modal share,arm modal,arm modal share,court order
+Claude Sonnet 5,C0990,BT via English,3 dismissed,0.71,2 granted in part,0.58,1 granted in full
+Claude Sonnet 5,C1423,BT via English,3 dismissed,0.68,2 granted in part,0.55,1 granted in full
+Claude Sonnet 5,C1423,BT via German,3 dismissed,0.68,2 granted in part,0.58,1 granted in full
+Gemini 3.6 Flash,C0990,BT via German,1 granted in full,0.65,3 dismissed,0.58,1 granted in full
+Gemini 3.6 Flash,C0990,German (plain terms),1 granted in full,0.65,3 dismissed,0.74,1 granted in full

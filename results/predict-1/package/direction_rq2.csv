@@ -1,0 +1,5 @@
+﻿configuration,model,reasoning,cases,mean D (EN grant share minus Greek),95% CI low,95% CI high,flips towards granting,flips towards refusing,"flips, grant share unchanged",no flip,exact sign test p (two-sided),Wilcoxon signed-rank p on D (exact),non-zero D
+terra,gpt-5.6-terra,medium,10,0.02,0.0,0.06,0,0,0,10,,1.0,1
+terra-off,gpt-5.6-terra,none,10,0.0,0.0,0.0,0,0,0,10,,,0
+sonnet,claude-sonnet-5,medium,10,-0.3066666667,-0.4733333333,-0.1466666667,0,3,0,7,0.25,0.015625,7
+gemini,gemini-3.6-flash,medium,10,-0.0033333333,-0.03,0.0266666667,0,0,0,10,,1.0,3
