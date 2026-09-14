@@ -25,6 +25,8 @@ sent. The raw outputs were fingerprinted before parsing (`FROZEN-outputs.sha256`
 | `<run>/report.md` | one-page summary, one headline row per configuration | `analyse.py` |
 | `<run>/error_coding.xlsx` | one row per flip against the Greek modal outcome, with both File A texts, three typical reasons a side, and empty coding columns with drop-down lists (flip codes T/G/S/D/N/O, threshold codes T1–T4, ground check) | `error_workbook.py` |
 | `<run>/package/` | every comparison the design allows, one tab per table in `results_package.xlsx` and as CSV: run summary; outcome distribution by model and arm; modal outcome per case for every model and arm against the court; grant share per case; inter-model agreement per arm; agreement with the court per arm (accuracy and MCC); ground distribution by model and arm; modal ground per case; reply language and reliability by arm; tokens, latency and cost; flips; rates, direction, stated ground. Four figures. | `results_package.py` |
+| `main-1/paper/Figure1.pdf` (`.png`) | the paper's figure: modal outcome per case for every model, in the six arms of the main run (decide) and the Greek and English arms of the predictive run (predict), with the court's order | `paper_figure_single.py` |
+| `main-1/paper/T3_considerations.csv` | the keyword screen of the reasoning (patterns in the script; a screen, not hand coding) | `keyword_screen.py` |
 | `main-1/paper/` | the paper's tables (`tables.md`, `paper_tables.xlsx`) and figures at proceedings text width: Figure 1 (modal outcome, 10 cases × 6 arms × 4 models, court in the margin), Figure 2 (decide against predict, Greek and English), Figure 3 (reasoning tokens by language); `T3_considerations.csv`, the keyword screen of the reasons | `paper_figures.py` |
 
 ## Reading the tables
@@ -47,6 +49,8 @@ python scripts/analyse.py --run main-1 --court "<path to the private coding shee
 python scripts/error_workbook.py --run main-1
 python scripts/results_package.py --run main-1
 python scripts/paper_figures.py --run main-1
+python scripts/keyword_screen.py --run main-1
+python scripts/paper_figure_single.py      # after analyse.py for both main-1 and predict-1
 ```
 
 The same for `predict-1` (no `paper_figures.py`; its figure is Figure 2 of `main-1/paper/`). The coding sheet
